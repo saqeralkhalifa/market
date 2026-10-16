@@ -1,5 +1,24 @@
 [
  {
+  "id": "wa7180",
+  "created": "2026-10-16T12:12:00+03:00",
+  "status": "available",
+  "category": "wheels",
+  "title": "Zipp carbon wheelset, deep front and rear disc",
+  "description": "Zipp front deep section carbon wheel and Zipp rear disc wheel, sold as a pair.",
+  "price": 400,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Mohamed",
+  "phone": "+97336484760",
+  "photos": [
+   "img/wa7180-1.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
   "id": "wa2410",
   "created": "2025-10-29T16:10:17+03:00",
   "status": "available",
