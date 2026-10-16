@@ -1,6 +1,14 @@
-/* Market, market.saqeralkhalifa.com. Listings come from the Apps Script API; import.json is the offline fallback. */
+/* Market, market.saqeralkhalifa.com. Listings posted through the form live in Supabase; the WhatsApp imports live in import.json. */
 (function(){
-var API = "__API__";
+var SB = {url:"__SBURL__", key:"__SBKEY__"};
+var LIVE = SB.url.indexOf("http") === 0;
+function sbh(extra){ var h = {apikey:SB.key, Authorization:"Bearer "+SB.key}; for(var k in extra) h[k] = extra[k]; return h; }
+function rpc(fn, body){ return fetch(SB.url+"/rest/v1/rpc/"+fn, {method:"POST", headers:sbh({"Content-Type":"application/json"}), body:JSON.stringify(body)}).then(function(r){ return r.json().then(function(j){ if(!r.ok) throw new Error(j && j.message || r.status); return j; }); }); }
+function upPhoto(dataUrl, i){
+  var bin = atob(dataUrl.split(",")[1]), a = new Uint8Array(bin.length); for(var k=0;k<bin.length;k++) a[k] = bin.charCodeAt(k);
+  var name = Date.now().toString(36) + "-" + Math.random().toString(36).slice(2,8) + "-" + i + ".jpg";
+  return fetch(SB.url+"/storage/v1/object/photos/"+name, {method:"POST", headers:sbh({"Content-Type":"image/jpeg"}), body:new Blob([a],{type:"image/jpeg"})}).then(function(r){ if(!r.ok) throw new Error("photo"); return SB.url+"/storage/v1/object/public/photos/"+name; });
+}
 var T = {
  en:{kicker:"Team Bahrain community", h:"Market", sub:"New and used sports equipment in Bahrain: bikes, wheels, trainers, watches, shoes and everything for triathlon, cycling, running and swimming. Anyone can post, and a listing appears as soon as it is submitted.",
   post:"Post an item", search:"Search the market", all:"Everything", showSold:"Show sold items", sortNew:"Newest first", sortLow:"Price, low to high", sortHigh:"Price, high to low",
@@ -44,7 +52,7 @@ var CATS = [
 var CONDS = [["new","New","جديد"],["like-new","Like new","شبه جديد"],["used","Used","مستعمل"],["for-parts","For parts or repair","للقطع أو الإصلاح"]];
 var MON = {en:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], ar:["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"]};
 
-var items = null, state = {cat:"all", q:"", sold:true, sort:"new"}, view = document.getElementById("view");
+var loading = false, items = null, state = {cat:"all", q:"", sold:true, sort:"new"}, view = document.getElementById("view");
 function L(){ return document.documentElement.lang === "ar" ? "ar" : "en"; }
 function t(k){ return T[L()][k]; }
 function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
@@ -58,20 +66,18 @@ function params(){ return new URLSearchParams(location.search); }
 function go(url){ history.pushState(null, "", url); route(); window.scrollTo(0, 0); }
 
 function load(){
+  if(loading) return; loading = true;
   view.innerHTML = '<p class="mk-empty">'+esc(t("loading"))+'</p>';
-  var done = false;
-  function use(list){ if(done) return; done = true; items = list || []; route(); }
-  if(API.indexOf("http") === 0){
-    fetch(API + "?t=" + Date.now()).then(function(r){ return r.json(); }).then(function(j){ if(j && j.ok && j.items && j.items.length) use(j.items); else fallback(); }).catch(fallback);
-  } else fallback();
-  function fallback(){ fetch("import.json").then(function(r){ return r.json(); }).then(function(l){ l.sort(function(a,b){ return a.created < b.created ? 1 : -1; }); use(l); }).catch(function(){ use([]); }); }
+  var cols = "id,created,status,category,title,description,price,currency,condition,size,location,seller,phone,photos,source";
+  var a = fetch("import.json?v=" + Date.now()).then(function(r){ return r.json(); }).catch(function(){ return []; });
+  var b = LIVE ? fetch(SB.url+"/rest/v1/listings?select="+cols+"&order=created.desc", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
+  Promise.all([a,b]).then(function(x){ loading = false; var l = x[1].concat(x[0]); l.sort(function(p,q){ return p.created < q.created ? 1 : -1; }); items = l; route(); });
 }
-
 function route(){
   var p = params();
   document.getElementById("hero").hidden = !!(p.get("item") || p.get("post"));
   if(p.get("post")) return renderForm();
-  if(items === null) return;
+  if(items === null){ load(); return; }
   if(p.get("item")) return renderItem(p.get("item"), p.get("key"));
   if(p.get("cat")) state.cat = p.get("cat");
   renderList();
@@ -147,7 +153,7 @@ function renderItem(id, key){
   var c = document.getElementById("copy"); if(c) c.addEventListener("click", function(){ var u = location.origin + location.pathname + "?item=" + encodeURIComponent(it.id); (navigator.clipboard ? navigator.clipboard.writeText(u) : Promise.reject()).then(function(){ c.textContent = t("copied"); }, function(){ prompt("", u); }); });
   Array.prototype.forEach.call(view.querySelectorAll("[data-st]"), function(b){ b.addEventListener("click", function(){
     var st = b.getAttribute("data-st"); b.disabled = true;
-    fetch(API, {method:"POST", body:JSON.stringify({action:"status", id:it.id, token:key, status:st})}).then(function(r){ return r.json(); }).then(function(j){
+    rpc("set_listing_status", {p_id:it.id, p_token:key, p_status:st}).then(function(j){
       document.getElementById("mst").textContent = j.ok ? t("done") : t("errNet");
       if(j.ok){ if(st==="removed"){ items = items.filter(function(x){ return x.id!==it.id; }); } else it.status = st; setTimeout(function(){ route(); }, 600); }
     }).catch(function(){ document.getElementById("mst").textContent = t("errNet"); b.disabled = false; });
@@ -198,15 +204,16 @@ function submit(e){
   if(v("f-title").length < 3){ err.textContent = t("errTitle"); return; }
   if(v("f-phone").replace(/\D/g,"").length < 8){ err.textContent = t("errPhone"); return; }
   if(!document.getElementById("f-ok").checked){ err.textContent = t("errConsent"); return; }
-  if(API.indexOf("http") !== 0){ err.textContent = t("errOff"); return; }
+  if(!LIVE){ err.textContent = t("errOff"); return; }
   var b = document.getElementById("go"); b.disabled = true; b.textContent = t("sending");
-  var body = {action:"create", title:v("f-title"), category:v("f-cat"), condition:v("f-cond"), price:v("f-price").replace(/[^\d.]/g,""), currency:v("f-cur"), size:v("f-size"),
-    description:v("f-desc"), seller:v("f-name"), phone:v("f-phone"), location:v("f-loc"), website:v("f-web"), photos:photos};
-  fetch(API, {method:"POST", body:JSON.stringify(body)}).then(function(r){ return r.json(); }).then(function(j){
-    if(!j.ok) throw new Error(j.error);
+  var body = {title:v("f-title"), category:v("f-cat"), condition:v("f-cond"), price:v("f-price").replace(/[^\d.]/g,""), currency:v("f-cur"), size:v("f-size"),
+    description:v("f-desc"), seller:v("f-name"), phone:v("f-phone"), location:v("f-loc")};
+  if(v("f-web")) return;
+  Promise.all(photos.map(upPhoto)).then(function(urls){ body.photos = urls; return rpc("post_listing", {p:body}); }).then(function(j){
+    if(!j || !j.ok) throw new Error("post");
     var base = location.origin + location.pathname;
     var view_ = base + "?item=" + j.id, man = view_ + "&key=" + j.token;
-    items = null; load();
+    items = null;
     var box = document.getElementById("okbox");
     b.hidden = true;
     box.innerHTML = '<div class="mk-ok"><strong>'+esc(t("okH"))+'</strong><div class="mk-acts"><a class="mk-btn" href="'+esc(view_)+'">'+esc(t("okView"))+'</a></div><p style="margin-top:16px">'+esc(t("okKeep"))+'</p><input class="mk-in" readonly value="'+esc(man)+'" onclick="this.select()"></div>';
@@ -237,5 +244,5 @@ document.addEventListener("click", function(e){
 window.addEventListener("popstate", route);
 var l0 = "en"; try{ l0 = mcInitLang(); }catch(e){}
 document.documentElement.lang = l0; document.documentElement.dir = l0 === "ar" ? "rtl" : "ltr";
-texts(); route(); load();
+texts(); route();
 })();
