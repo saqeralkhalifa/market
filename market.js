@@ -1,8 +1,8 @@
 /* Market, market.saqeralkhalifa.com. Listings posted through the form live in Supabase; the WhatsApp imports live in import.json. */
 (function(){
-var SB = {url:"__SBURL__", key:"__SBKEY__"};
+var SB = {url:"https://nvzdniisxdllohxfsjil.supabase.co", key:"sb_publishable_MPqPXsk6BkRbeVBsenDoFg_Qyya0cZG"};
 var LIVE = SB.url.indexOf("http") === 0;
-function sbh(extra){ var h = {apikey:SB.key, Authorization:"Bearer "+SB.key}; for(var k in extra) h[k] = extra[k]; return h; }
+function sbh(extra){ var h = {apikey:SB.key}; for(var k in extra) h[k] = extra[k]; return h; }
 function rpc(fn, body){ return fetch(SB.url+"/rest/v1/rpc/"+fn, {method:"POST", headers:sbh({"Content-Type":"application/json"}), body:JSON.stringify(body)}).then(function(r){ return r.json().then(function(j){ if(!r.ok) throw new Error(j && j.message || r.status); return j; }); }); }
 function upPhoto(dataUrl, i){
   var bin = atob(dataUrl.split(",")[1]), a = new Uint8Array(bin.length); for(var k=0;k<bin.length;k++) a[k] = bin.charCodeAt(k);
