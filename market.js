@@ -122,7 +122,7 @@ function card(it){
   var ph = it.photos && it.photos.length ? '<img loading="lazy" src="'+esc(img(it.photos[0]))+'" alt="'+esc(it.title)+'">' : '<span class="none">'+esc(lab(CATS,it.category))+'</span>';
   var sold = it.status === "sold";
   return '<a class="mk-card'+(sold?" sold":"")+'" href="?item='+encodeURIComponent(it.id)+'" data-item="'+esc(it.id)+'"><span class="mk-ph">'+ph+(sold?'<span class="mk-badge">'+esc(t("sold"))+'</span>':'')+'</span>'+
-    '<span class="mk-cb"><span class="mk-price">'+esc(price(it))+'</span><span class="mk-ct">'+esc(it.title)+'</span><span class="mk-meta">'+esc(lab(CONDS,it.condition))+(it.location?', '+esc(it.location):'')+'</span></span></a>';
+    '<span class="mk-cb"><span class="mk-price">'+esc(price(it))+'</span><span class="mk-ct" dir="auto">'+esc(it.title)+'</span><span class="mk-meta">'+esc(lab(CONDS,it.condition))+(it.location?', '+esc(it.location):'')+'</span></span></a>';
 }
 
 function renderItem(id, key){
@@ -138,10 +138,10 @@ function renderItem(id, key){
   var contact = d ? '<div class="mk-acts">'+(sold?'':'<a class="mk-btn" target="_blank" rel="noopener" href="https://wa.me/'+d+'?text='+encodeURIComponent(t("waMsg")(it.title))+'">'+esc(t("wa"))+'</a><a class="mk-btn ghost" href="tel:+'+d+'">'+esc(t("call"))+'</a>')+'<button class="mk-btn ghost" type="button" id="copy">'+esc(t("copy"))+'</button></div>'
     : '<p class="mk-note">'+esc(t("nophone"))+'</p><div class="mk-acts"><button class="mk-btn ghost" type="button" id="copy">'+esc(t("copy"))+'</button></div>';
   var h = back + '<div class="mk-item"><div>'+gal+'</div><div>'+
-    '<h1>'+esc(it.title)+'</h1>'+(sold?'<span class="mk-soldline">'+esc(t("sold"))+'</span>':'')+'<div class="mk-bigprice">'+esc(price(it))+'</div>'+
+    '<h1 dir="auto">'+esc(it.title)+'</h1>'+(sold?'<span class="mk-soldline">'+esc(t("sold"))+'</span>':'')+'<div class="mk-bigprice">'+esc(price(it))+'</div>'+
     '<div class="mk-facts"><span class="mk-fact">'+esc(lab(CATS,it.category))+'</span><span class="mk-fact">'+esc(lab(CONDS,it.condition))+'</span>'+(it.size?'<span class="mk-fact">'+esc(it.size)+'</span>':'')+(it.location?'<span class="mk-fact">'+esc(it.location)+'</span>':'')+'<span class="mk-fact">'+esc(t("posted"))+' '+esc(date(it.created))+'</span></div>'+
-    (it.description?'<div class="mk-desc">'+esc(it.description)+'</div>':'')+
-    '<div class="mk-seller"><div class="lbl">'+esc(t("seller"))+'</div>'+(it.seller?'<div class="nm">'+esc(it.seller)+'</div>':'')+(d?'<div class="ph">'+esc(pretty(it.phone))+'</div>':'')+contact+'</div>'+
+    (it.description?'<div class="mk-desc" dir="auto">'+esc(it.description)+'</div>':'')+
+    '<div class="mk-seller"><div class="lbl">'+esc(t("seller"))+'</div>'+(it.seller?'<div class="nm" dir="auto">'+esc(it.seller)+'</div>':'')+(d?'<div class="ph">'+esc(pretty(it.phone))+'</div>':'')+contact+'</div>'+
     (it.source==="whatsapp"?'<p class="mk-note">'+esc(t("fromWa"))+'</p>':'')+
     '<p class="mk-note">'+esc(t("safety"))+' <a href="mailto:contact@saqeralkhalifa.com?subject='+encodeURIComponent("Market report "+it.id)+'">'+esc(t("report"))+'</a></p>'+
     (key?'<div class="mk-manage"><div class="mk-seller" style="margin:0;padding:0;border:0"><div class="lbl">'+esc(t("manage"))+'</div></div><p class="mk-note" style="margin-top:8px">'+esc(t("manageP"))+'</p><div class="mk-acts">'+
