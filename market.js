@@ -20,7 +20,7 @@ var T = {
   ownQ:"Is this your item? Mark it as sold", ownQ2:"Is this your item? Mark it as available again", ownP:"Enter the WhatsApp number shown on this listing to confirm it is yours.", ownPh:"Your WhatsApp number",
   ownWrong:"That number does not match this listing. Use the number shown above.", ownUnknown:"This listing cannot be changed here yet. Use the Report this listing link below and it will be updated for you.",
   smpBadge:"Sample photo", smpNote:"Sample photo of a similar item, not the seller's own. Ask the seller for photos of the actual item.", smpBy:"Photo",
-  report:"Report this listing", fromWa:"First posted in the Team Bahrain WhatsApp group.", notfound:"This listing was not found. It may have been removed by the seller.",
+  report:"Report this listing", fromWa:"First posted in the Team Bahrain WhatsApp group.", fromIg:"First posted on the Team Bahrain Triathlon Instagram page.", notfound:"This listing was not found. It may have been removed by the seller.",
   manage:"Manage your listing", manageP:"This private link lets you change the status of your listing. Keep it to yourself.", markSold:"Mark as sold", markAvail:"Mark as available", remove:"Remove listing", done:"Saved.",
   fh:"Post an item", fp:"Fill in the details and add photos. Your listing goes live on the Market as soon as you submit it.",
   fTitle:"What are you selling?", fTitleH:"Brand, model and size, for example Canyon Speedmax CF 8, size M", fCat:"Category", fCond:"Condition", fPrice:"Price", fPriceH:"Leave empty to show price on request",
@@ -40,7 +40,7 @@ var T = {
   ownQ:"هل هذا منتجك؟ اجعله مباعا", ownQ2:"هل هذا منتجك؟ اجعله متوفرا من جديد", ownP:"أدخل رقم الواتساب الظاهر في هذا الإعلان لتأكيد أنه لك.", ownPh:"رقم الواتساب",
   ownWrong:"هذا الرقم لا يطابق الإعلان. استخدم الرقم الظاهر أعلاه.", ownUnknown:"لا يمكن تعديل هذا الإعلان من هنا بعد. استخدم رابط الإبلاغ عن الإعلان في الأسفل وسيتم تحديثه.",
   smpBadge:"صورة توضيحية", smpNote:"صورة توضيحية لمنتج مشابه وليست للمنتج المعروض. اطلب من البائع صورا للمنتج نفسه.", smpBy:"الصورة",
-  report:"الإبلاغ عن هذا الإعلان", fromWa:"نشر أولا في مجموعة فريق البحرين على واتساب.", notfound:"لم يتم العثور على هذا الإعلان. ربما حذفه البائع.",
+  report:"الإبلاغ عن هذا الإعلان", fromWa:"نشر أولا في مجموعة فريق البحرين على واتساب.", fromIg:"نشر أولا على صفحة فريق البحرين للترايثلون في إنستغرام.", notfound:"لم يتم العثور على هذا الإعلان. ربما حذفه البائع.",
   manage:"إدارة إعلانك", manageP:"هذا الرابط الخاص يتيح لك تغيير حالة إعلانك. احتفظ به لنفسك.", markSold:"تم البيع", markAvail:"متوفر", remove:"حذف الإعلان", done:"تم الحفظ.",
   fh:"اعرض منتجك", fp:"أدخل التفاصيل وأضف الصور. يظهر إعلانك في السوق فور إرساله.",
   fTitle:"ماذا تبيع؟", fTitleH:"الماركة والموديل والمقاس، مثل Canyon Speedmax CF 8 مقاس M", fCat:"القسم", fCond:"الحالة", fPrice:"السعر", fPriceH:"اتركه فارغا ليظهر السعر عند التواصل",
@@ -151,7 +151,7 @@ function renderItem(id, key){
     '<div class="mk-facts"><span class="mk-fact">'+esc(lab(CATS,it.category))+'</span><span class="mk-fact">'+esc(lab(CONDS,it.condition))+'</span>'+(it.size?'<span class="mk-fact">'+esc(it.size)+'</span>':'')+(it.location?'<span class="mk-fact">'+esc(it.location)+'</span>':'')+'<span class="mk-fact">'+esc(t("posted"))+' '+esc(date(it.created))+'</span></div>'+
     (it.description?'<div class="mk-desc" dir="auto">'+esc(it.description)+'</div>':'')+
     '<div class="mk-seller"><div class="lbl">'+esc(t("seller"))+'</div>'+(it.seller?'<div class="nm" dir="auto">'+esc(it.seller)+'</div>':'')+(d?'<div class="ph">'+esc(pretty(it.phone))+'</div>':'')+contact+'</div>'+
-    (it.source==="whatsapp"?'<p class="mk-note">'+esc(t("fromWa"))+'</p>':'')+
+    (it.source==="whatsapp"?'<p class="mk-note">'+esc(t("fromWa"))+'</p>':'')+(it.source==="instagram"?'<p class="mk-note">'+esc(t("fromIg"))+'</p>':'')+
     '<p class="mk-note">'+esc(t("safety"))+' <a href="mailto:contact@saqeralkhalifa.com?subject='+encodeURIComponent("Market report "+it.id)+'">'+esc(t("report"))+'</a></p>'+
     (key?'<div class="mk-manage"><div class="mk-seller" style="margin:0;padding:0;border:0"><div class="lbl">'+esc(t("manage"))+'</div></div><p class="mk-note" style="margin-top:8px">'+esc(t("manageP"))+'</p><div class="mk-acts">'+
       '<button class="mk-btn" type="button" data-st="'+(sold?"available":"sold")+'">'+esc(sold?t("markAvail"):t("markSold"))+'</button><button class="mk-btn ghost" type="button" data-st="removed">'+esc(t("remove"))+'</button></div><p class="mk-note" id="mst"></p></div>':'')+

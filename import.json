@@ -19,1058 +19,23 @@
   "source": "whatsapp"
  },
  {
-  "id": "wa2410",
-  "created": "2025-10-29T16:10:17+03:00",
+  "id": "wa7176",
+  "created": "2026-10-16T07:55:45+03:00",
   "status": "available",
   "category": "bikes",
-  "title": "Trek Madone SLR 7 Project One, size 50",
-  "description": "800 Series OCLV carbon frame with IsoFlow, Shimano Ultegra Di2 wireless electronic groupset and deep carbon wheels. Color purple blue. Size 50. Excellent condition. Bought for 2,950 BHD. Serious buyers only.",
-  "price": 1600,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Mubarak Mohamed",
-  "phone": "+97336661186",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/madone6.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Wikimedia Commons contributor",
-   "lic": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:2013Madone7.jpg"
-  }
- },
- {
-  "id": "wa2480",
-  "created": "2025-11-05T15:16:27+03:00",
-  "status": "available",
-  "category": "watches",
-  "title": "Garmin Fenix 7X Pro",
-  "description": "Clean, lightly used, with all original accessories.",
-  "price": 280,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Muath Najm",
-  "phone": "+97334037071",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/fenixA1.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Wvangeit",
-   "lic": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:GarminFenix6X.jpg"
-  }
- },
- {
-  "id": "wa2656",
-  "created": "2025-11-15T13:14:48+03:00",
-  "status": "available",
-  "category": "apparel",
-  "title": "WYN tri suits, No Limits team design",
-  "description": "New tri suits by WYN in the No Limits team design, no name printed. Men's Hi Velocity X at 128 BHD and men's Luceo+ at 155 BHD. Sizes medium and large. Available in Bahrain.",
-  "price": 128,
-  "currency": "BHD",
-  "condition": "new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Abdulla Salmeen",
-  "phone": "+97338382026",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/trisuit0.png"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Triroth",
-   "lic": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Liga-Einteiler_TSG_08_Roth_Triathlon_Frauen.png"
-  }
- },
- {
-  "id": "wa6363",
-  "created": "2026-08-23T09:33:18+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Road bike, size 52, under dealer warranty",
-  "description": "Almost new, used only twice for short test rides. Includes a two year official warranty from the authorized dealer, Sabeel Trading. Original price 815 BHD, bought for 535 BHD. Asking 480 BHD, slightly negotiable.",
-  "price": 480,
-  "currency": "BHD",
-  "condition": "like-new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Sarah El-Nigoumi",
-  "phone": "+97366666584",
-  "photos": [
-   "img/wa6363-1.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa2938",
-  "created": "2025-11-26T10:55:33+03:00",
-  "status": "available",
-  "category": "watches",
-  "title": "Garmin Fenix 7X Pro Sapphire Solar, 51 mm",
-  "description": "Clean, lightly used. Comes with the original box, charging cable and extra straps. Negotiable.",
-  "price": 200,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Muath Najm",
-  "phone": "+97333919462",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/fenixA0.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Crishazzard",
-   "lic": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Garmin_Fenix_6x_Pro_Solar.jpg"
-  }
- },
- {
-  "id": "wa2968",
-  "created": "2025-11-28T08:14:58+03:00",
-  "status": "available",
-  "category": "shoes",
-  "title": "Shimano TR903 triathlon cycling shoes, EU 46.5",
-  "description": "Used twice, like new. Selling because of the wrong size. Posted on behalf of a friend.",
-  "price": 90,
-  "currency": "BHD",
-  "condition": "like-new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "",
-  "phone": "+97336248374",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/shoes6.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Glory Cycles",
-   "lic": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Shimano_SH-RX800_Women's_Gravel_Shoe.jpg"
-  }
- },
- {
-  "id": "wa3031",
-  "created": "2025-11-30T14:06:03+03:00",
-  "status": "available",
-  "category": "watches",
-  "title": "Garmin Fenix 7X Sapphire Solar, 51 mm",
-  "description": "Carbon grey DLC titanium with black band, touch screen. Used for two years, in good condition. Battery life up to 28 days. Dealer price 4,599 SAR. Located in Riyadh.",
-  "price": 2000,
-  "currency": "SAR",
-  "condition": "used",
-  "size": "",
-  "location": "Riyadh",
-  "seller": "",
-  "phone": "+966561634661",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/fenixA1.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Wvangeit",
-   "lic": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:GarminFenix6X.jpg"
-  }
- },
- {
-  "id": "wa3846",
-  "created": "2025-12-26T15:25:05+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "BMC time trial bike, carbon, 11 speed",
-  "description": "Latest BMC TT model, carbon frame, 11 speed. Almost new and in perfect working order. Negotiable. WhatsApp only.",
-  "price": 600,
-  "currency": "BHD",
-  "condition": "like-new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "بو ناصر",
-  "phone": "+97336000527",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/bmcA6.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Ardfern",
-   "lic": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Giro_d'Italia_2014,_Belfast,_May_2014_(39).JPG"
-  }
- },
- {
-  "id": "wa3964",
-  "created": "2026-01-07T09:24:51+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Scott Addict carbon road bike, size XS",
-  "description": "New carbon bike with Shimano 105. Message the seller for the price and details.",
-  "price": null,
-  "currency": "BHD",
-  "condition": "new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "",
-  "phone": "+966555277615",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/addict7.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "KOERS. Museum van de Wielersport",
-   "lic": "CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Koersfiets_Scott,_Annemiek_van_Vleuten,_2020_-_detailopname_frame_rechts_(R0629_-_collectie_KOERS._Museum_van_de_Wielersport).jpg"
-  }
- },
- {
-  "id": "wa3968",
-  "created": "2026-01-07T09:54:08+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Specialized Tarmac, size 52",
-  "description": "Carbon frame with Shimano 105 groupset. Message the seller for the price and details.",
-  "price": null,
+  "title": "Poggio road bike, 53 cm",
+  "description": "Carbon frame, Shimano wheels (not carbon). Excellent condition and ready to ride. Negotiable.",
+  "price": 420,
   "currency": "BHD",
   "condition": "used",
   "size": "",
   "location": "Bahrain",
   "seller": "",
-  "phone": "+966555277615",
+  "phone": "+97339317101",
   "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/triB2.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Keanu",
-   "lic": "CC BY-SA 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Specialized_road_bike.JPG"
-  }
- },
- {
-  "id": "wa4286",
-  "created": "2026-01-31T16:15:05+03:00",
-  "status": "available",
-  "category": "wheels",
-  "title": "ZIPP 404 carbon wheelset, rim brake",
-  "description": "Deep section carbon clincher wheels, rim depth about 58 mm, rim brake. Light and fast. The seller confirmed it is still available after a buyer backed out. Message the seller in the Team Bahrain group for the price.",
-  "price": null,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Fatma ALSalem",
-  "phone": "",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/zipp20.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "mahmut",
-   "lic": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Zipp_808_with_valve_extender.jpg"
-  }
- },
- {
-  "id": "wa4606",
-  "created": "2026-02-18T16:46:29+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Trek Speed Concept Project One 2023, size M",
-  "description": "Triathlon bike, SRAM Rival groupset, excellent condition.",
-  "price": 2000,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Abdulla Salmeen",
-  "phone": "+97338382026",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/speedc0.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Ericsson jp",
-   "lic": "CC BY 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:2014_Speed_Concept.JPG"
-  }
- },
- {
-  "id": "wa4614",
-  "created": "2026-02-20T09:04:40+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Canyon Speedmax CF 8.0 Di2 (2018), size M",
-  "description": "Excellent condition. Stem length 80 mm, cassette 11 to 28, 11 speed.",
-  "price": 1200,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Ali Al-Tawash",
-  "phone": "+97339547580",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/speedmax1.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Peter Ehrit Werbefotografie GmbH",
-   "lic": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Speedmax-cfr-blue-2020.jpg"
-  }
- },
- {
-  "id": "wa4723",
-  "created": "2026-02-26T09:08:49+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Giant Trinity 2021, size small",
-  "description": "Dura-Ace crank with Stages power meter, 170 mm. Pass Quest 54T 1x chainring. Aerocoach cockpit. 80 mm carbon wheelset with Novatech hubs and aero spokes. Bontrager R3 700x25 tires. ISM PN 1.1 saddle. KMC gold chain. Ultegra R8000 rear derailleur and Ultegra cassette. Bizman rear bottle holder and Elite bottle. Message the seller in the Team Bahrain group.",
-  "price": 1250,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Vismark Morelos",
-  "phone": "",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/triB1.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "VisitCentralFL",
-   "lic": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Velo_triathlon.jpg"
-  }
- },
- {
-  "id": "wa4727",
-  "created": "2026-02-27T16:42:45+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Merida Reacto 6000 Limited Edition (2018), size 54",
-  "description": "Bahrain Merida limited edition. Full aero carbon frame. Vision carbon handlebar and Vision 55 mm carbon wheelset. Shimano Dura-Ace groupset, crankset and pedals. Prologo carbon saddle, Continental tires. The bike can be seen at the Endura shop.",
-  "price": 1500,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Abdulla Albinzayed",
-  "phone": "+97333177777",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/mer0.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Petar Milošević",
-   "lic": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Merida_Reacto_(2018).jpg"
-  }
- },
- {
-  "id": "wa4826",
-  "created": "2026-03-16T17:33:41+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Trek Speed Concept carbon, size M",
-  "description": "Carbon frame with carbon wheels. The bike can be seen at the Endura shop.",
-  "price": 650,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "",
-  "phone": "+97333020388",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/speedc0.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Ericsson jp",
-   "lic": "CC BY 3.0",
-   "url": "https://commons.wikimedia.org/wiki/File:2014_Speed_Concept.JPG"
-  }
- },
- {
-  "id": "wa4915",
-  "created": "2026-03-22T12:08:36+03:00",
-  "status": "available",
-  "category": "watches",
-  "title": "Garmin Fenix 7S Pro Sapphire Solar",
-  "description": "Lightly used and clean. Comes with the original charger and box. Negotiable.",
-  "price": 185,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Muath Najm",
-  "phone": "+97338062222",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/fenixA0.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Crishazzard",
-   "lic": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Garmin_Fenix_6x_Pro_Solar.jpg"
-  }
- },
- {
-  "id": "wa4950",
-  "created": "2026-03-27T09:43:51+03:00",
-  "status": "available",
-  "category": "watches",
-  "title": "Garmin Fenix 7S Solar",
-  "description": "Clean, with all original accessories and an extra strap. Negotiable.",
-  "price": 160,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Raed Aldosari",
-  "phone": "+97338062222",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/fenixA0.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Crishazzard",
-   "lic": "CC BY-SA 4.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Garmin_Fenix_6x_Pro_Solar.jpg"
-  }
- },
- {
-  "id": "wa5011",
-  "created": "2026-04-07T20:08:25+03:00",
-  "status": "available",
-  "category": "trainers",
-  "title": "Tacx Flow smart trainer",
-  "description": "Perfect condition. Negotiable. Message the seller directly.",
-  "price": 115,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Kelly Samson",
-  "phone": "",
-  "photos": [
-   "img/wa5011-1.jpg",
-   "img/wa5011-2.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5121",
-  "created": "2026-04-12T10:30:51+03:00",
-  "status": "available",
-  "category": "shoes",
-  "title": "Adidas Adizero Evo SL, US 10",
-  "description": "Worn once, bought the week before posting. Selling because of the wrong size. Bought for 52 BHD.",
-  "price": 40,
-  "currency": "BHD",
-  "condition": "like-new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Glassman",
-  "phone": "",
-  "photos": [
-   "img/wa5121-1.jpg",
-   "img/wa5121-2.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5313",
-  "created": "2026-05-01T13:34:50+03:00",
-  "status": "available",
-  "category": "shoes",
-  "title": "ASICS Novablast, size 42, with Oakley sunglasses",
-  "description": "Package of Novablast running shoes in size 42, used twice for walking only, together with Oakley sunglasses. A member of the group noted the phone number may be wrong, so check with the seller in the Team Bahrain group if it does not connect.",
-  "price": 60,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Glassman",
-  "phone": "+97333468870",
-  "photos": [
-   "img/wa5313-1.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5401",
-  "created": "2026-05-10T09:13:29+03:00",
-  "status": "available",
-  "category": "shoes",
-  "title": "Hoka carbon plate running shoes, women's UK 8",
-  "description": "Brand new, bought in the wrong size by mistake.",
-  "price": 45,
-  "currency": "BHD",
-  "condition": "new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Junaid Ahmad",
-  "phone": "",
-  "photos": [
-   "img/wa5401-1.jpg",
-   "img/wa5401-2.jpg",
-   "img/wa5401-3.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5412",
-  "created": "2026-05-12T14:38:33+03:00",
-  "status": "available",
-  "category": "trainers",
-  "title": "Wahoo Kickr Core smart trainer",
-  "description": "Bought brand new in August 2025. Seller is moving abroad. 230 BHD or best offer.",
-  "price": 230,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Claire",
-  "phone": "",
-  "photos": [
-   "img/wa5412-1.jpg",
-   "img/wa5412-2.jpg",
-   "img/wa5412-3.jpg",
-   "img/wa5412-4.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5417",
-  "created": "2026-05-12T15:01:19+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Scott Speedster 10 road bike, size small",
-  "description": "Best for riders from 165 to 180 cm. 22 speed, disc brakes, carbon fork, Shimano 105 groupset. Includes new Shimano pedals, two bottle cages and a saddle bag. An adult Specialized helmet in medium and men's small cycling gloves are included at no charge.",
-  "price": 275,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Claire",
-  "phone": "",
-  "photos": [
-   "img/wa5417-1.jpg",
-   "img/wa5417-2.jpg",
-   "img/wa5417-3.jpg",
-   "img/wa5417-4.jpg",
-   "img/wa5417-5.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5444",
-  "created": "2026-05-13T17:25:50+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Trek Emonda SL, Ultegra Di2, size 52",
-  "description": "Shimano Ultegra Di2 11 speed.",
-  "price": 380,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "",
-  "phone": "+97339939950",
-  "photos": [
-   "img/wa5444-1.jpg",
-   "img/wa5444-2.jpg",
-   "img/wa5444-3.jpg",
-   "img/wa5444-4.jpg",
-   "img/wa5444-5.jpg",
-   "img/wa5444-6.jpg",
-   "img/wa5444-7.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5453",
-  "created": "2026-05-14T10:12:50+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Trek Emonda ALR 6, Ultegra, size 54",
-  "description": "Shimano Ultegra 11 speed.",
-  "price": 250,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "",
-  "phone": "+97339697919",
-  "photos": [
-   "img/wa5453-1.jpg",
-   "img/wa5453-2.jpg",
-   "img/wa5453-3.jpg",
-   "img/wa5453-4.jpg",
-   "img/wa5453-5.jpg",
-   "img/wa5453-6.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5603",
-  "created": "2026-06-01T17:00:19+03:00",
-  "status": "available",
-  "category": "watches",
-  "title": "Garmin Fenix 8 Solar",
-  "description": "Excellent condition. Message the seller for the price.",
-  "price": null,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Majid Khalid",
-  "phone": "+97336646566",
-  "photos": [
-   "img/wa5603-1.jpg",
-   "img/wa5603-2.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5652",
-  "created": "2026-06-06T19:52:28+03:00",
-  "status": "available",
-  "category": "shoes",
-  "title": "New Balance FuelCell with carbon plate, UK 9",
-  "description": "New, selling because of the wrong size.",
-  "price": 70,
-  "currency": "BHD",
-  "condition": "new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Junaid Ahmad",
-  "phone": "",
-  "photos": [
-   "img/wa5652-1.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5671",
-  "created": "2026-06-09T08:33:35+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Quintana Roo PRsix triathlon bike, size 50",
-  "description": "Shimano Ultegra Di2 11 speed, Zipp 404 NSW wheels, rim brake.",
-  "price": 13000,
-  "currency": "SAR",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Majeed",
-  "phone": "+966564864496",
-  "photos": [
-   "img/wa5671-1.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5758",
-  "created": "2026-06-15T14:11:01+03:00",
-  "status": "available",
-  "category": "trainers",
-  "title": "Xplova NOZA S smart trainer",
-  "description": "Excellent condition. Negotiable.",
-  "price": 100,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Ali Al Khalifa",
-  "phone": "+97339242999",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/trainer1.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Glory Cycles",
-   "lic": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:Tacx_Flux_Smart_Trainer_-_Mounted_1.jpg"
-  }
- },
- {
-  "id": "wa5870",
-  "created": "2026-06-25T12:41:30+03:00",
-  "status": "available",
-  "category": "wheels",
-  "title": "Disc wheel",
-  "description": "Rear disc wheel. See the photos for the model.",
-  "price": 300,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Abdulla Almogahwi",
-  "phone": "+97336133633",
-  "photos": [
-   "img/wa5870-1.jpg",
-   "img/wa5870-2.jpg",
-   "img/wa5870-3.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa5933",
-  "created": "2026-07-06T19:01:44+03:00",
-  "status": "available",
-  "category": "shoes",
-  "title": "Adidas Adizero, size 39 1/3",
-  "description": "Worn twice. Selling because of the wrong size.",
-  "price": 40,
-  "currency": "BHD",
-  "condition": "like-new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Sarah El-Nigoumi",
-  "phone": "+97339313661",
-  "photos": [
-   "img/wa5933-1.jpg",
-   "img/wa5933-2.jpg",
-   "img/wa5933-3.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6117",
-  "created": "2026-07-20T22:31:26+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "BMC Timemachine One, size M/S",
-  "description": "Shimano 105 mechanical. Oval 80 mm carbon wheels. Aerocoach extensions at 45 degrees with arm wings. CeramicSpeed bottom bracket.",
-  "price": 950,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Hussain A. Majeed",
-  "phone": "+97339438282",
-  "photos": [
-   "img/wa6117-1.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6131",
-  "created": "2026-07-23T10:59:22+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Cozon hybrid bike, size small",
-  "description": "Lightweight aluminum frame, pink rigid fork, mechanical disc brakes front and rear, multi speed drivetrain, 700C wheels, flat handlebar. Bottle cage and kickstand included. Very good condition and well maintained. Suits city riding and fitness rides.",
-  "price": 40,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Sarah El-Nigoumi",
-  "phone": "+97335113522",
-  "photos": [
-   "img/wa6131-1.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6179",
-  "created": "2026-07-28T09:30:02+03:00",
-  "status": "available",
-  "category": "helmets",
-  "title": "Woom kids cycling helmet",
-  "description": "Brand new. Lightweight in-mould construction, adjustable fit and good ventilation. Suits cycling, balance bikes and scooters.",
-  "price": 30,
-  "currency": "BHD",
-  "condition": "new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Sarah El-Nigoumi",
-  "phone": "",
-  "photos": [
-   "img/wa6179-1.jpg",
-   "img/wa6179-2.jpg",
-   "img/wa6179-3.jpg",
-   "img/wa6179-4.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6187",
-  "created": "2026-07-28T09:34:01+03:00",
-  "status": "available",
-  "category": "helmets",
-  "title": "Bontrager Tyro kids cycling helmet, 48 to 52 cm",
-  "description": "Child size 48 to 52 cm, 289 g. Dial fit system, Fidlock magnetic buckle, washable pads, extended rear coverage.",
-  "price": 10,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Sarah El-Nigoumi",
-  "phone": "",
-  "photos": [
-   "img/wa6187-1.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6223",
-  "created": "2026-08-06T13:18:44+03:00",
-  "status": "sold",
-  "category": "bikes",
-  "title": "Trek Emonda SL 5, size 52",
-  "description": "Carbon frame, Shimano 105 11 speed, chainrings 50/34, carbon rims. Excellent condition.",
-  "price": 385,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Abu Zahraa",
-  "phone": "+97339118373",
-  "photos": [
-   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/madone3.jpg"
-  ],
-  "source": "whatsapp",
-  "sample": {
-   "by": "Adam Leadbetter",
-   "lic": "CC BY 2.0",
-   "url": "https://commons.wikimedia.org/wiki/File:2005_Trek_Madone.jpg"
-  }
- },
- {
-  "id": "wa6384",
-  "created": "2026-08-24T22:46:12+03:00",
-  "status": "available",
-  "category": "watches",
-  "title": "Garmin Venu 2 Plus, 43 mm",
-  "description": "Almost new. Bright display, can take phone calls from the watch. Comes with two extra straps and all accessories. Negotiable.",
-  "price": 60,
-  "currency": "BHD",
-  "condition": "like-new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Hamani Aldoseri",
-  "phone": "+97336446321",
-  "photos": [
-   "img/wa6384-1.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6463",
-  "created": "2026-09-01T06:58:01+03:00",
-  "status": "available",
-  "category": "parts",
-  "title": "Favero Assioma Duo power meter pedals, LOOK",
-  "description": "Used. Duo set, but only the left side is working. LOOK compatible.",
-  "price": 77,
-  "currency": "BHD",
-  "condition": "for-parts",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "H. AL Askari",
-  "phone": "+97333325366",
-  "photos": [
-   "img/wa6463-1.jpg",
-   "img/wa6463-2.jpg",
-   "img/wa6463-3.jpg",
-   "img/wa6463-4.jpg",
-   "img/wa6463-5.jpg",
-   "img/wa6463-6.jpg",
-   "img/wa6463-7.jpg",
-   "img/wa6463-8.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6494",
-  "created": "2026-09-05T10:34:04+03:00",
-  "status": "available",
-  "category": "shoes",
-  "title": "Nike Alphafly 3, EU 40",
-  "description": "Brand new. WhatsApp the seller.",
-  "price": 85,
-  "currency": "BHD",
-  "condition": "new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "",
-  "phone": "+97336432921",
-  "photos": [
-   "img/wa6494-1.jpg",
-   "img/wa6494-2.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6532",
-  "created": "2026-09-08T09:46:53+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Specialized S-Works Tarmac SL7 (2024), size 56",
-  "description": "Roval Rapid integrated cockpit (SL8). Full SRAM Red Pro Team Edition groupset with power meter. Roval Rapid C38 wheels. Includes Specialized Romin Evo Mirror saddle, two carbon bottle cages, Garmin Edge 820 and PDS SL pedals.",
-  "price": 2200,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Mubarak Aljuma",
-  "phone": "+97366144449",
-  "photos": [
-   "img/wa6532-1.jpg",
-   "img/wa6532-2.jpg",
-   "img/wa6532-3.jpg",
-   "img/wa6532-4.jpg",
-   "img/wa6532-5.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6679",
-  "created": "2026-09-24T10:08:27+03:00",
-  "status": "available",
-  "category": "watches",
-  "title": "Garmin Fenix 6S Sapphire",
-  "description": "Fenix 6S Sapphire edition.",
-  "price": 100,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Muath Najm",
-  "phone": "+97334037071",
-  "photos": [
-   "img/wa6679-1.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6612",
-  "created": "2026-09-17T13:23:52+03:00",
-  "status": "sold",
-  "category": "trainers",
-  "title": "Garmin Tacx smart trainer with Ultegra cassette",
-  "description": "Home trainer in good condition, fitted with a Shimano Ultegra 11 speed cassette.",
-  "price": 200,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Bu Ali",
-  "phone": "+97333445522",
-  "photos": [
-   "img/wa6612-1.jpg",
-   "img/wa6612-2.jpg",
-   "img/wa6612-3.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6631",
-  "created": "2026-09-18T21:18:01+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Giant Talon 29 2 (2025), size L",
-  "description": "Mountain bike with 29 inch wheels and aluminum frame. 1x9 drivetrain, front suspension with lockout, hydraulic disc brakes. Two year warranty.",
-  "price": 220,
-  "currency": "BHD",
-  "condition": "like-new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "",
-  "phone": "+97333115221",
-  "photos": [
-   "img/wa6631-1.jpg",
-   "img/wa6631-2.jpg",
-   "img/wa6631-3.jpg",
-   "img/wa6631-4.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6691",
-  "created": "2026-09-25T11:36:49+03:00",
-  "status": "available",
-  "category": "watches",
-  "title": "Huawei Band 6, forest green",
-  "description": "Smart watch and health tracker.",
-  "price": 15,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Eric H",
-  "phone": "",
-  "photos": [
-   "img/wa6691-1.jpg",
-   "img/wa6691-2.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6698",
-  "created": "2026-09-26T07:57:26+03:00",
-  "status": "available",
-  "category": "wheels",
-  "title": "Reynolds 60 mm carbon wheels, rim brake",
-  "description": "Rim brake wheelset, 60 mm deep. Excellent condition.",
-  "price": 400,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "",
-  "phone": "+97334168622",
-  "photos": [
-   "img/wa6698-1.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6721",
-  "created": "2026-10-01T15:31:32+03:00",
-  "status": "available",
-  "category": "shoes",
-  "title": "On Cloudswift 3, EU 41",
-  "description": "EU 41, US 9.5, UK 7.5. Zero kilometers. Selling because of the wrong size.",
-  "price": 40,
-  "currency": "BHD",
-  "condition": "new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Junaid Ahmad",
-  "phone": "",
-  "photos": [
-   "img/wa6721-1.jpg",
-   "img/wa6721-2.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa7055",
-  "created": "2026-10-13T20:51:08+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Canyon Ultimate CF, size small (52)",
-  "description": "Reynolds carbon wheels, 60 mm. SRAM Red eTap wireless groupset. Crank 170 mm, 52T chainring, 11 speed cassette. Ceramic bearings.",
-  "price": 900,
-  "currency": "BHD",
-  "condition": "used",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "بو احمد",
-  "phone": "+97334168622",
-  "photos": [
-   "img/wa7055-1.jpg"
+   "img/wa7176-1.jpg",
+   "img/wa7176-2.jpg",
+   "img/wa7176-3.jpg"
   ],
   "source": "whatsapp"
  },
@@ -1095,39 +60,37 @@
   "source": "whatsapp"
  },
  {
-  "id": "wa7176",
-  "created": "2026-10-16T07:55:45+03:00",
+  "id": "wa7055",
+  "created": "2026-10-13T20:51:08+03:00",
   "status": "available",
   "category": "bikes",
-  "title": "Poggio road bike, 53 cm",
-  "description": "Carbon frame, Shimano wheels (not carbon). Excellent condition and ready to ride. Negotiable.",
-  "price": 420,
+  "title": "Canyon Ultimate CF, size small (52)",
+  "description": "Reynolds carbon wheels, 60 mm. SRAM Red eTap wireless groupset. Crank 170 mm, 52T chainring, 11 speed cassette. Ceramic bearings.",
+  "price": 900,
   "currency": "BHD",
   "condition": "used",
   "size": "",
   "location": "Bahrain",
-  "seller": "",
-  "phone": "+97339317101",
+  "seller": "بو احمد",
+  "phone": "+97334168622",
   "photos": [
-   "img/wa7176-1.jpg",
-   "img/wa7176-2.jpg",
-   "img/wa7176-3.jpg"
+   "img/wa7055-1.jpg"
   ],
   "source": "whatsapp"
  },
  {
-  "id": "wa6230",
-  "created": "2026-08-09T22:40:27+03:00",
-  "status": "available",
+  "id": "wa7039",
+  "created": "2026-10-11T20:19:15+03:00",
+  "status": "sold",
   "category": "entries",
-  "title": "Diyar Half Marathon, 10 km race entry",
-  "description": "10 km race entry for the Diyar Half Marathon on 21 November 2026. Posted on behalf of a friend. Message the seller in the Team Bahrain group.",
-  "price": 10,
+  "title": "Diyar Half Marathon entry",
+  "description": "Half marathon entry for 21 November 2026.",
+  "price": null,
   "currency": "BHD",
   "condition": "new",
   "size": "",
   "location": "Bahrain",
-  "seller": "Sarah El-Nigoumi",
+  "seller": "Jamie",
   "phone": "",
   "photos": [
    "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/halfm7.jpg"
@@ -1164,18 +127,302 @@
   }
  },
  {
-  "id": "wa7039",
-  "created": "2026-10-11T20:19:15+03:00",
-  "status": "sold",
-  "category": "entries",
-  "title": "Diyar Half Marathon entry",
-  "description": "Half marathon entry for 21 November 2026.",
-  "price": null,
+  "id": "wa6721",
+  "created": "2026-10-01T15:31:32+03:00",
+  "status": "available",
+  "category": "shoes",
+  "title": "On Cloudswift 3, EU 41",
+  "description": "EU 41, US 9.5, UK 7.5. Zero kilometers. Selling because of the wrong size.",
+  "price": 40,
   "currency": "BHD",
   "condition": "new",
   "size": "",
   "location": "Bahrain",
-  "seller": "Jamie",
+  "seller": "Junaid Ahmad",
+  "phone": "",
+  "photos": [
+   "img/wa6721-1.jpg",
+   "img/wa6721-2.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa6698",
+  "created": "2026-09-26T07:57:26+03:00",
+  "status": "available",
+  "category": "wheels",
+  "title": "Reynolds 60 mm carbon wheels, rim brake",
+  "description": "Rim brake wheelset, 60 mm deep. Excellent condition.",
+  "price": 400,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "",
+  "phone": "+97334168622",
+  "photos": [
+   "img/wa6698-1.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa6691",
+  "created": "2026-09-25T11:36:49+03:00",
+  "status": "available",
+  "category": "watches",
+  "title": "Huawei Band 6, forest green",
+  "description": "Smart watch and health tracker.",
+  "price": 15,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Eric H",
+  "phone": "",
+  "photos": [
+   "img/wa6691-1.jpg",
+   "img/wa6691-2.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa6679",
+  "created": "2026-09-24T10:08:27+03:00",
+  "status": "available",
+  "category": "watches",
+  "title": "Garmin Fenix 6S Sapphire",
+  "description": "Fenix 6S Sapphire edition.",
+  "price": 100,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Muath Najm",
+  "phone": "+97334037071",
+  "photos": [
+   "img/wa6679-1.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa6631",
+  "created": "2026-09-18T21:18:01+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Giant Talon 29 2 (2025), size L",
+  "description": "Mountain bike with 29 inch wheels and aluminum frame. 1x9 drivetrain, front suspension with lockout, hydraulic disc brakes. Two year warranty.",
+  "price": 220,
+  "currency": "BHD",
+  "condition": "like-new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "",
+  "phone": "+97333115221",
+  "photos": [
+   "img/wa6631-1.jpg",
+   "img/wa6631-2.jpg",
+   "img/wa6631-3.jpg",
+   "img/wa6631-4.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa6612",
+  "created": "2026-09-17T13:23:52+03:00",
+  "status": "sold",
+  "category": "trainers",
+  "title": "Garmin Tacx smart trainer with Ultegra cassette",
+  "description": "Home trainer in good condition, fitted with a Shimano Ultegra 11 speed cassette.",
+  "price": 200,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Bu Ali",
+  "phone": "+97333445522",
+  "photos": [
+   "img/wa6612-1.jpg",
+   "img/wa6612-2.jpg",
+   "img/wa6612-3.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "igDdBAmV",
+  "created": "2026-09-08T12:00:00+03:00",
+  "status": "available",
+  "category": "trainers",
+  "title": "Tacx Flux S smart trainer",
+  "description": "Tacx Flux S indoor smart trainer with an 11 speed cassette included. Compatible with all training apps and runs smooth. Like new, with the original box.",
+  "price": null,
+  "currency": "BHD",
+  "condition": "like-new",
+  "seller": "",
+  "phone": "+97333945585",
+  "photos": [
+   "img/ig-DdBAmV-sxp4-1.jpg"
+  ],
+  "source": "instagram",
+  "location": "Bahrain"
+ },
+ {
+  "id": "wa6532",
+  "created": "2026-09-08T09:46:53+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Specialized S-Works Tarmac SL7 (2024), size 56",
+  "description": "Roval Rapid integrated cockpit (SL8). Full SRAM Red Pro Team Edition groupset with power meter. Roval Rapid C38 wheels. Includes Specialized Romin Evo Mirror saddle, two carbon bottle cages, Garmin Edge 820 and PDS SL pedals.",
+  "price": 2200,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Mubarak Aljuma",
+  "phone": "+97366144449",
+  "photos": [
+   "img/wa6532-1.jpg",
+   "img/wa6532-2.jpg",
+   "img/wa6532-3.jpg",
+   "img/wa6532-4.jpg",
+   "img/wa6532-5.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa6494",
+  "created": "2026-09-05T10:34:04+03:00",
+  "status": "available",
+  "category": "shoes",
+  "title": "Nike Alphafly 3, EU 40",
+  "description": "Brand new. WhatsApp the seller.",
+  "price": 85,
+  "currency": "BHD",
+  "condition": "new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "",
+  "phone": "+97336432921",
+  "photos": [
+   "img/wa6494-1.jpg",
+   "img/wa6494-2.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "igDc241_",
+  "created": "2026-09-04T12:00:00+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Scott Active 50 mountain bike, size M",
+  "description": "Scott Active 50 mountain bike in excellent condition, bought from TriLife in 2023 with the original papers. Medium frame, 29 inch wheels, Shimano 2x8 drivetrain. Comes with a Specialized helmet, an air pump and a rear light. Clean and ready to ride.",
+  "price": 210,
+  "currency": "BHD",
+  "condition": "used",
+  "seller": "",
+  "phone": "+97338412183",
+  "photos": [
+   "img/ig-Dc241_WDJ97-1.jpg",
+   "img/ig-Dc241_WDJ97-2.jpg"
+  ],
+  "source": "instagram",
+  "location": "Bahrain"
+ },
+ {
+  "id": "wa6463",
+  "created": "2026-09-01T06:58:01+03:00",
+  "status": "available",
+  "category": "parts",
+  "title": "Favero Assioma Duo power meter pedals, LOOK",
+  "description": "Used. Duo set, but only the left side is working. LOOK compatible.",
+  "price": 77,
+  "currency": "BHD",
+  "condition": "for-parts",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "H. AL Askari",
+  "phone": "+97333325366",
+  "photos": [
+   "img/wa6463-1.jpg",
+   "img/wa6463-2.jpg",
+   "img/wa6463-3.jpg",
+   "img/wa6463-4.jpg",
+   "img/wa6463-5.jpg",
+   "img/wa6463-6.jpg",
+   "img/wa6463-7.jpg",
+   "img/wa6463-8.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa6384",
+  "created": "2026-08-24T22:46:12+03:00",
+  "status": "available",
+  "category": "watches",
+  "title": "Garmin Venu 2 Plus, 43 mm",
+  "description": "Almost new. Bright display, can take phone calls from the watch. Comes with two extra straps and all accessories. Negotiable.",
+  "price": 60,
+  "currency": "BHD",
+  "condition": "like-new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Hamani Aldoseri",
+  "phone": "+97336446321",
+  "photos": [
+   "img/wa6384-1.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa6363",
+  "created": "2026-08-23T09:33:18+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Road bike, size 52, under dealer warranty",
+  "description": "Almost new, used only twice for short test rides. Includes a two year official warranty from the authorized dealer, Sabeel Trading. Original price 815 BHD, bought for 535 BHD. Asking 480 BHD, slightly negotiable.",
+  "price": 480,
+  "currency": "BHD",
+  "condition": "like-new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Sarah El-Nigoumi",
+  "phone": "+97366666584",
+  "photos": [
+   "img/wa6363-1.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "igDcVhQI",
+  "created": "2026-08-22T12:00:00+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Canyon Speedmax CF, Ultegra Di2, Zipp 808 and 404",
+  "description": "Canyon Speedmax CF carbon time trial and triathlon bike with Canyon F39 CF carbon fork, about 8.5 kg. Shimano Ultegra Di2 electronic 2x11 with 52/36 crankset and 11-28 cassette, Ultegra rim brakes. Zipp 808 Firecrest carbon rear wheel and Zipp 404 Firecrest carbon front wheel.",
+  "price": 1600,
+  "currency": "BHD",
+  "condition": "used",
+  "seller": "",
+  "phone": "+97333938474",
+  "photos": [
+   "img/ig-DcVhQIJDEpD-1.jpg",
+   "img/ig-DcVhQIJDEpD-2.jpg"
+  ],
+  "source": "instagram",
+  "location": "Bahrain"
+ },
+ {
+  "id": "wa6230",
+  "created": "2026-08-09T22:40:27+03:00",
+  "status": "available",
+  "category": "entries",
+  "title": "Diyar Half Marathon, 10 km race entry",
+  "description": "10 km race entry for the Diyar Half Marathon on 21 November 2026. Posted on behalf of a friend. Message the seller in the Team Bahrain group.",
+  "price": 10,
+  "currency": "BHD",
+  "condition": "new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Sarah El-Nigoumi",
   "phone": "",
   "photos": [
    "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/halfm7.jpg"
@@ -1185,6 +432,851 @@
    "by": "Kenneth Allen",
    "lic": "CC BY-SA 2.0",
    "url": "https://commons.wikimedia.org/wiki/File:Omagh_Half_Marathon_-_runners_(8)_-_geograph.org.uk_-_4404332.jpg"
+  }
+ },
+ {
+  "id": "wa6223",
+  "created": "2026-08-06T13:18:44+03:00",
+  "status": "sold",
+  "category": "bikes",
+  "title": "Trek Emonda SL 5, size 52",
+  "description": "Carbon frame, Shimano 105 11 speed, chainrings 50/34, carbon rims. Excellent condition.",
+  "price": 385,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Abu Zahraa",
+  "phone": "+97339118373",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/madone3.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Adam Leadbetter",
+   "lic": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:2005_Trek_Madone.jpg"
+  }
+ },
+ {
+  "id": "wa6187",
+  "created": "2026-07-28T09:34:01+03:00",
+  "status": "available",
+  "category": "helmets",
+  "title": "Bontrager Tyro kids cycling helmet, 48 to 52 cm",
+  "description": "Child size 48 to 52 cm, 289 g. Dial fit system, Fidlock magnetic buckle, washable pads, extended rear coverage.",
+  "price": 10,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Sarah El-Nigoumi",
+  "phone": "",
+  "photos": [
+   "img/wa6187-1.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa6179",
+  "created": "2026-07-28T09:30:02+03:00",
+  "status": "available",
+  "category": "helmets",
+  "title": "Woom kids cycling helmet",
+  "description": "Brand new. Lightweight in-mould construction, adjustable fit and good ventilation. Suits cycling, balance bikes and scooters.",
+  "price": 30,
+  "currency": "BHD",
+  "condition": "new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Sarah El-Nigoumi",
+  "phone": "",
+  "photos": [
+   "img/wa6179-1.jpg",
+   "img/wa6179-2.jpg",
+   "img/wa6179-3.jpg",
+   "img/wa6179-4.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa6131",
+  "created": "2026-07-23T10:59:22+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Cozon hybrid bike, size small",
+  "description": "Lightweight aluminum frame, pink rigid fork, mechanical disc brakes front and rear, multi speed drivetrain, 700C wheels, flat handlebar. Bottle cage and kickstand included. Very good condition and well maintained. Suits city riding and fitness rides.",
+  "price": 40,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Sarah El-Nigoumi",
+  "phone": "+97335113522",
+  "photos": [
+   "img/wa6131-1.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa6117",
+  "created": "2026-07-20T22:31:26+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "BMC Timemachine One, size M/S",
+  "description": "Shimano 105 mechanical. Oval 80 mm carbon wheels. Aerocoach extensions at 45 degrees with arm wings. CeramicSpeed bottom bracket.",
+  "price": 950,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Hussain A. Majeed",
+  "phone": "+97339438282",
+  "photos": [
+   "img/wa6117-1.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "igDa5dX4",
+  "created": "2026-07-17T12:00:00+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Scott full carbon road bike (2014), size L 56",
+  "description": "Scott 2014 full carbon road bike, size L 56, Shimano 105 with ceramic bearings. Used only a few times. Original price BHD 1,500.",
+  "price": 900,
+  "currency": "BHD",
+  "condition": "like-new",
+  "seller": "",
+  "phone": "+97366673344",
+  "photos": [
+   "img/ig-Da5dX4nDC4v-1.jpg"
+  ],
+  "source": "instagram",
+  "location": "Bahrain"
+ },
+ {
+  "id": "wa5933",
+  "created": "2026-07-06T19:01:44+03:00",
+  "status": "available",
+  "category": "shoes",
+  "title": "Adidas Adizero, size 39 1/3",
+  "description": "Worn twice. Selling because of the wrong size.",
+  "price": 40,
+  "currency": "BHD",
+  "condition": "like-new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Sarah El-Nigoumi",
+  "phone": "+97339313661",
+  "photos": [
+   "img/wa5933-1.jpg",
+   "img/wa5933-2.jpg",
+   "img/wa5933-3.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5870",
+  "created": "2026-06-25T12:41:30+03:00",
+  "status": "available",
+  "category": "wheels",
+  "title": "Disc wheel",
+  "description": "Rear disc wheel. See the photos for the model.",
+  "price": 300,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Abdulla Almogahwi",
+  "phone": "+97336133633",
+  "photos": [
+   "img/wa5870-1.jpg",
+   "img/wa5870-2.jpg",
+   "img/wa5870-3.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5758",
+  "created": "2026-06-15T14:11:01+03:00",
+  "status": "available",
+  "category": "trainers",
+  "title": "Xplova NOZA S smart trainer",
+  "description": "Excellent condition. Negotiable.",
+  "price": 100,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Ali Al Khalifa",
+  "phone": "+97339242999",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/trainer1.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Glory Cycles",
+   "lic": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Tacx_Flux_Smart_Trainer_-_Mounted_1.jpg"
+  }
+ },
+ {
+  "id": "wa5671",
+  "created": "2026-06-09T08:33:35+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Quintana Roo PRsix triathlon bike, size 50",
+  "description": "Shimano Ultegra Di2 11 speed, Zipp 404 NSW wheels, rim brake.",
+  "price": 13000,
+  "currency": "SAR",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Majeed",
+  "phone": "+966564864496",
+  "photos": [
+   "img/wa5671-1.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5652",
+  "created": "2026-06-06T19:52:28+03:00",
+  "status": "available",
+  "category": "shoes",
+  "title": "New Balance FuelCell with carbon plate, UK 9",
+  "description": "New, selling because of the wrong size.",
+  "price": 70,
+  "currency": "BHD",
+  "condition": "new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Junaid Ahmad",
+  "phone": "",
+  "photos": [
+   "img/wa5652-1.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5603",
+  "created": "2026-06-01T17:00:19+03:00",
+  "status": "available",
+  "category": "watches",
+  "title": "Garmin Fenix 8 Solar",
+  "description": "Excellent condition. Message the seller for the price.",
+  "price": null,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Majid Khalid",
+  "phone": "+97336646566",
+  "photos": [
+   "img/wa5603-1.jpg",
+   "img/wa5603-2.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5453",
+  "created": "2026-05-14T10:12:50+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Trek Emonda ALR 6, Ultegra, size 54",
+  "description": "Shimano Ultegra 11 speed.",
+  "price": 250,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "",
+  "phone": "+97339697919",
+  "photos": [
+   "img/wa5453-1.jpg",
+   "img/wa5453-2.jpg",
+   "img/wa5453-3.jpg",
+   "img/wa5453-4.jpg",
+   "img/wa5453-5.jpg",
+   "img/wa5453-6.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5444",
+  "created": "2026-05-13T17:25:50+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Trek Emonda SL, Ultegra Di2, size 52",
+  "description": "Shimano Ultegra Di2 11 speed.",
+  "price": 380,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "",
+  "phone": "+97339939950",
+  "photos": [
+   "img/wa5444-1.jpg",
+   "img/wa5444-2.jpg",
+   "img/wa5444-3.jpg",
+   "img/wa5444-4.jpg",
+   "img/wa5444-5.jpg",
+   "img/wa5444-6.jpg",
+   "img/wa5444-7.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5417",
+  "created": "2026-05-12T15:01:19+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Scott Speedster 10 road bike, size small",
+  "description": "Best for riders from 165 to 180 cm. 22 speed, disc brakes, carbon fork, Shimano 105 groupset. Includes new Shimano pedals, two bottle cages and a saddle bag. An adult Specialized helmet in medium and men's small cycling gloves are included at no charge.",
+  "price": 275,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Claire",
+  "phone": "",
+  "photos": [
+   "img/wa5417-1.jpg",
+   "img/wa5417-2.jpg",
+   "img/wa5417-3.jpg",
+   "img/wa5417-4.jpg",
+   "img/wa5417-5.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5412",
+  "created": "2026-05-12T14:38:33+03:00",
+  "status": "available",
+  "category": "trainers",
+  "title": "Wahoo Kickr Core smart trainer",
+  "description": "Bought brand new in August 2025. Seller is moving abroad. 230 BHD or best offer.",
+  "price": 230,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Claire",
+  "phone": "",
+  "photos": [
+   "img/wa5412-1.jpg",
+   "img/wa5412-2.jpg",
+   "img/wa5412-3.jpg",
+   "img/wa5412-4.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5401",
+  "created": "2026-05-10T09:13:29+03:00",
+  "status": "available",
+  "category": "shoes",
+  "title": "Hoka carbon plate running shoes, women's UK 8",
+  "description": "Brand new, bought in the wrong size by mistake.",
+  "price": 45,
+  "currency": "BHD",
+  "condition": "new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Junaid Ahmad",
+  "phone": "",
+  "photos": [
+   "img/wa5401-1.jpg",
+   "img/wa5401-2.jpg",
+   "img/wa5401-3.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5313",
+  "created": "2026-05-01T13:34:50+03:00",
+  "status": "available",
+  "category": "shoes",
+  "title": "ASICS Novablast, size 42, with Oakley sunglasses",
+  "description": "Package of Novablast running shoes in size 42, used twice for walking only, together with Oakley sunglasses. A member of the group noted the phone number may be wrong, so check with the seller in the Team Bahrain group if it does not connect.",
+  "price": 60,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Glassman",
+  "phone": "+97333468870",
+  "photos": [
+   "img/wa5313-1.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5121",
+  "created": "2026-04-12T10:30:51+03:00",
+  "status": "available",
+  "category": "shoes",
+  "title": "Adidas Adizero Evo SL, US 10",
+  "description": "Worn once, bought the week before posting. Selling because of the wrong size. Bought for 52 BHD.",
+  "price": 40,
+  "currency": "BHD",
+  "condition": "like-new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Glassman",
+  "phone": "",
+  "photos": [
+   "img/wa5121-1.jpg",
+   "img/wa5121-2.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "wa5011",
+  "created": "2026-04-07T20:08:25+03:00",
+  "status": "available",
+  "category": "trainers",
+  "title": "Tacx Flow smart trainer",
+  "description": "Perfect condition. Negotiable. Message the seller directly.",
+  "price": 115,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Kelly Samson",
+  "phone": "",
+  "photos": [
+   "img/wa5011-1.jpg",
+   "img/wa5011-2.jpg"
+  ],
+  "source": "whatsapp"
+ },
+ {
+  "id": "igDWtkzQ",
+  "created": "2026-04-04T12:00:00+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Canyon Ultimate CF SL carbon road bike, size M",
+  "description": "Canyon carbon road bike, size Medium, Shimano Ultegra Di2 11 speed electronic shifting, DT Swiss alloy wheels and a carbon handlebar. Great condition.",
+  "price": null,
+  "currency": "BHD",
+  "condition": "used",
+  "seller": "",
+  "phone": "+97333945585",
+  "photos": [
+   "img/ig-DWtkzQNjHxO-1.jpg"
+  ],
+  "source": "instagram",
+  "location": "Bahrain"
+ },
+ {
+  "id": "wa4950",
+  "created": "2026-03-27T09:43:51+03:00",
+  "status": "available",
+  "category": "watches",
+  "title": "Garmin Fenix 7S Solar",
+  "description": "Clean, with all original accessories and an extra strap. Negotiable.",
+  "price": 160,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Raed Aldosari",
+  "phone": "+97338062222",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/fenixA0.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Crishazzard",
+   "lic": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Garmin_Fenix_6x_Pro_Solar.jpg"
+  }
+ },
+ {
+  "id": "wa4915",
+  "created": "2026-03-22T12:08:36+03:00",
+  "status": "available",
+  "category": "watches",
+  "title": "Garmin Fenix 7S Pro Sapphire Solar",
+  "description": "Lightly used and clean. Comes with the original charger and box. Negotiable.",
+  "price": 185,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Muath Najm",
+  "phone": "+97338062222",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/fenixA0.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Crishazzard",
+   "lic": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Garmin_Fenix_6x_Pro_Solar.jpg"
+  }
+ },
+ {
+  "id": "wa4826",
+  "created": "2026-03-16T17:33:41+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Trek Speed Concept carbon, size M",
+  "description": "Carbon frame with carbon wheels. The bike can be seen at the Endura shop.",
+  "price": 650,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "",
+  "phone": "+97333020388",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/speedc0.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Ericsson jp",
+   "lic": "CC BY 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:2014_Speed_Concept.JPG"
+  }
+ },
+ {
+  "id": "wa4727",
+  "created": "2026-02-27T16:42:45+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Merida Reacto 6000 Limited Edition (2018), size 54",
+  "description": "Bahrain Merida limited edition. Full aero carbon frame. Vision carbon handlebar and Vision 55 mm carbon wheelset. Shimano Dura-Ace groupset, crankset and pedals. Prologo carbon saddle, Continental tires. The bike can be seen at the Endura shop.",
+  "price": 1500,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Abdulla Albinzayed",
+  "phone": "+97333177777",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/mer0.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Petar Milošević",
+   "lic": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Merida_Reacto_(2018).jpg"
+  }
+ },
+ {
+  "id": "wa4723",
+  "created": "2026-02-26T09:08:49+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Giant Trinity 2021, size small",
+  "description": "Dura-Ace crank with Stages power meter, 170 mm. Pass Quest 54T 1x chainring. Aerocoach cockpit. 80 mm carbon wheelset with Novatech hubs and aero spokes. Bontrager R3 700x25 tires. ISM PN 1.1 saddle. KMC gold chain. Ultegra R8000 rear derailleur and Ultegra cassette. Bizman rear bottle holder and Elite bottle. Message the seller in the Team Bahrain group.",
+  "price": 1250,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Vismark Morelos",
+  "phone": "",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/triB1.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "VisitCentralFL",
+   "lic": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Velo_triathlon.jpg"
+  }
+ },
+ {
+  "id": "wa4614",
+  "created": "2026-02-20T09:04:40+03:00",
+  "status": "sold",
+  "category": "bikes",
+  "title": "Canyon Speedmax CF 8.0 Di2 (2018), size M",
+  "description": "Excellent condition. Stem length 80 mm, cassette 11 to 28, 11 speed.",
+  "price": 1200,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Ali Al-Tawash",
+  "phone": "+97339547580",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/speedmax1.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Peter Ehrit Werbefotografie GmbH",
+   "lic": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Speedmax-cfr-blue-2020.jpg"
+  }
+ },
+ {
+  "id": "wa4606",
+  "created": "2026-02-18T16:46:29+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Trek Speed Concept Project One 2023, size M",
+  "description": "Triathlon bike, SRAM Rival groupset, excellent condition.",
+  "price": 2000,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Abdulla Salmeen",
+  "phone": "+97338382026",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/speedc0.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Ericsson jp",
+   "lic": "CC BY 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:2014_Speed_Concept.JPG"
+  }
+ },
+ {
+  "id": "wa4286",
+  "created": "2026-01-31T16:15:05+03:00",
+  "status": "available",
+  "category": "wheels",
+  "title": "ZIPP 404 carbon wheelset, rim brake",
+  "description": "Deep section carbon clincher wheels, rim depth about 58 mm, rim brake. Light and fast. The seller confirmed it is still available after a buyer backed out. Message the seller in the Team Bahrain group for the price.",
+  "price": null,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Fatma ALSalem",
+  "phone": "",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/zipp20.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "mahmut",
+   "lic": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Zipp_808_with_valve_extender.jpg"
+  }
+ },
+ {
+  "id": "wa3968",
+  "created": "2026-01-07T09:54:08+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Specialized Tarmac, size 52",
+  "description": "Carbon frame with Shimano 105 groupset. Message the seller for the price and details.",
+  "price": null,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "",
+  "phone": "+966555277615",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/triB2.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Keanu",
+   "lic": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Specialized_road_bike.JPG"
+  }
+ },
+ {
+  "id": "wa3964",
+  "created": "2026-01-07T09:24:51+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Scott Addict carbon road bike, size XS",
+  "description": "New carbon bike with Shimano 105. Message the seller for the price and details.",
+  "price": null,
+  "currency": "BHD",
+  "condition": "new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "",
+  "phone": "+966555277615",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/addict7.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "KOERS. Museum van de Wielersport",
+   "lic": "CC0",
+   "url": "https://commons.wikimedia.org/wiki/File:Koersfiets_Scott,_Annemiek_van_Vleuten,_2020_-_detailopname_frame_rechts_(R0629_-_collectie_KOERS._Museum_van_de_Wielersport).jpg"
+  }
+ },
+ {
+  "id": "wa3846",
+  "created": "2025-12-26T15:25:05+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "BMC time trial bike, carbon, 11 speed",
+  "description": "Latest BMC TT model, carbon frame, 11 speed. Almost new and in perfect working order. Negotiable. WhatsApp only.",
+  "price": 600,
+  "currency": "BHD",
+  "condition": "like-new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "بو ناصر",
+  "phone": "+97336000527",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/bmcA6.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Ardfern",
+   "lic": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Giro_d'Italia_2014,_Belfast,_May_2014_(39).JPG"
+  }
+ },
+ {
+  "id": "wa3031",
+  "created": "2025-11-30T14:06:03+03:00",
+  "status": "available",
+  "category": "watches",
+  "title": "Garmin Fenix 7X Sapphire Solar, 51 mm",
+  "description": "Carbon grey DLC titanium with black band, touch screen. Used for two years, in good condition. Battery life up to 28 days. Dealer price 4,599 SAR. Located in Riyadh.",
+  "price": 2000,
+  "currency": "SAR",
+  "condition": "used",
+  "size": "",
+  "location": "Riyadh",
+  "seller": "",
+  "phone": "+966561634661",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/fenixA1.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Wvangeit",
+   "lic": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:GarminFenix6X.jpg"
+  }
+ },
+ {
+  "id": "wa2968",
+  "created": "2025-11-28T08:14:58+03:00",
+  "status": "available",
+  "category": "shoes",
+  "title": "Shimano TR903 triathlon cycling shoes, EU 46.5",
+  "description": "Used twice, like new. Selling because of the wrong size. Posted on behalf of a friend.",
+  "price": 90,
+  "currency": "BHD",
+  "condition": "like-new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "",
+  "phone": "+97336248374",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/shoes6.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Glory Cycles",
+   "lic": "CC BY 2.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Shimano_SH-RX800_Women's_Gravel_Shoe.jpg"
+  }
+ },
+ {
+  "id": "wa2938",
+  "created": "2025-11-26T10:55:33+03:00",
+  "status": "available",
+  "category": "watches",
+  "title": "Garmin Fenix 7X Pro Sapphire Solar, 51 mm",
+  "description": "Clean, lightly used. Comes with the original box, charging cable and extra straps. Negotiable.",
+  "price": 200,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Muath Najm",
+  "phone": "+97333919462",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/fenixA0.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Crishazzard",
+   "lic": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Garmin_Fenix_6x_Pro_Solar.jpg"
+  }
+ },
+ {
+  "id": "wa2656",
+  "created": "2025-11-15T13:14:48+03:00",
+  "status": "available",
+  "category": "apparel",
+  "title": "WYN tri suits, No Limits team design",
+  "description": "New tri suits by WYN in the No Limits team design, no name printed. Men's Hi Velocity X at 128 BHD and men's Luceo+ at 155 BHD. Sizes medium and large. Available in Bahrain.",
+  "price": 128,
+  "currency": "BHD",
+  "condition": "new",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Abdulla Salmeen",
+  "phone": "+97338382026",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/trisuit0.png"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Triroth",
+   "lic": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:Liga-Einteiler_TSG_08_Roth_Triathlon_Frauen.png"
+  }
+ },
+ {
+  "id": "wa2480",
+  "created": "2025-11-05T15:16:27+03:00",
+  "status": "available",
+  "category": "watches",
+  "title": "Garmin Fenix 7X Pro",
+  "description": "Clean, lightly used, with all original accessories.",
+  "price": 280,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Muath Najm",
+  "phone": "+97334037071",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/fenixA1.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Wvangeit",
+   "lic": "CC BY-SA 4.0",
+   "url": "https://commons.wikimedia.org/wiki/File:GarminFenix6X.jpg"
+  }
+ },
+ {
+  "id": "wa2410",
+  "created": "2025-10-29T16:10:17+03:00",
+  "status": "available",
+  "category": "bikes",
+  "title": "Trek Madone SLR 7 Project One, size 50",
+  "description": "800 Series OCLV carbon frame with IsoFlow, Shimano Ultegra Di2 wireless electronic groupset and deep carbon wheels. Color purple blue. Size 50. Excellent condition. Bought for 2,950 BHD. Serious buyers only.",
+  "price": 1600,
+  "currency": "BHD",
+  "condition": "used",
+  "size": "",
+  "location": "Bahrain",
+  "seller": "Mubarak Mohamed",
+  "phone": "+97336661186",
+  "photos": [
+   "https://nvzdniisxdllohxfsjil.supabase.co/storage/v1/object/public/photos/sample/madone6.jpg"
+  ],
+  "source": "whatsapp",
+  "sample": {
+   "by": "Wikimedia Commons contributor",
+   "lic": "CC BY-SA 3.0",
+   "url": "https://commons.wikimedia.org/wiki/File:2013Madone7.jpg"
   }
  }
 ]
