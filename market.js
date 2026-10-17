@@ -17,6 +17,7 @@ var T = {
   wa:"WhatsApp", call:"Call", copy:"Copy link", copied:"Link copied", nophone:"The seller did not leave a number with this post. Message them in the Team Bahrain WhatsApp group.",
   waMsg:function(t){return "Hello, I saw your "+t+" on the Market at market.saqeralkhalifa.com. Is it still available?";},
   safety:"The Market is a noticeboard. Listings are posted by their sellers and are not checked by anyone. See the item in person before you pay, and meet in a public place.",
+  smpBadge:"Sample photo", smpNote:"Sample photo of a similar item, not the seller's own. Ask the seller for photos of the actual item.", smpBy:"Photo",
   report:"Report this listing", fromWa:"First posted in the Team Bahrain WhatsApp group.", notfound:"This listing was not found. It may have been removed by the seller.",
   manage:"Manage your listing", manageP:"This private link lets you change the status of your listing. Keep it to yourself.", markSold:"Mark as sold", markAvail:"Mark as available", remove:"Remove listing", done:"Saved.",
   fh:"Post an item", fp:"Fill in the details and add photos. Your listing goes live on the Market as soon as you submit it.",
@@ -34,6 +35,7 @@ var T = {
   wa:"واتساب", call:"اتصال", copy:"نسخ الرابط", copied:"تم نسخ الرابط", nophone:"لم يترك البائع رقما مع هذا الإعلان. راسله في مجموعة فريق البحرين على واتساب.",
   waMsg:function(t){return "مرحبا، رأيت إعلانك ("+t+") في السوق على market.saqeralkhalifa.com. هل ما زال متوفرا؟";},
   safety:"السوق لوحة إعلانات. ينشر البائعون إعلاناتهم بأنفسهم ولا يراجعها أحد. عاين المنتج بنفسك قبل الدفع، واختر مكانا عاما للقاء.",
+  smpBadge:"صورة توضيحية", smpNote:"صورة توضيحية لمنتج مشابه وليست للمنتج المعروض. اطلب من البائع صورا للمنتج نفسه.", smpBy:"الصورة",
   report:"الإبلاغ عن هذا الإعلان", fromWa:"نشر أولا في مجموعة فريق البحرين على واتساب.", notfound:"لم يتم العثور على هذا الإعلان. ربما حذفه البائع.",
   manage:"إدارة إعلانك", manageP:"هذا الرابط الخاص يتيح لك تغيير حالة إعلانك. احتفظ به لنفسك.", markSold:"تم البيع", markAvail:"متوفر", remove:"حذف الإعلان", done:"تم الحفظ.",
   fh:"اعرض منتجك", fp:"أدخل التفاصيل وأضف الصور. يظهر إعلانك في السوق فور إرساله.",
@@ -121,7 +123,7 @@ function renderList(){
 function card(it){
   var ph = it.photos && it.photos.length ? '<img loading="lazy" src="'+esc(img(it.photos[0]))+'" alt="'+esc(it.title)+'">' : '<span class="none">'+esc(lab(CATS,it.category))+'</span>';
   var sold = it.status === "sold";
-  return '<a class="mk-card'+(sold?" sold":"")+'" href="?item='+encodeURIComponent(it.id)+'" data-item="'+esc(it.id)+'"><span class="mk-ph">'+ph+(sold?'<span class="mk-badge">'+esc(t("sold"))+'</span>':'')+'</span>'+
+  return '<a class="mk-card'+(sold?" sold":"")+'" href="?item='+encodeURIComponent(it.id)+'" data-item="'+esc(it.id)+'"><span class="mk-ph">'+ph+(sold?'<span class="mk-badge">'+esc(t("sold"))+'</span>':'')+(it.sample?'<span class="mk-badge smp">'+esc(t("smpBadge"))+'</span>':'')+'</span>'+
     '<span class="mk-cb"><span class="mk-price">'+esc(price(it))+'</span><span class="mk-ct" dir="auto">'+esc(it.title)+'</span><span class="mk-meta">'+esc(lab(CONDS,it.condition))+(it.location?', '+esc(it.location):'')+'</span></span></a>';
 }
 
@@ -133,6 +135,7 @@ function renderItem(id, key){
   var gal = it.photos && it.photos.length ? '<div class="mk-gal" id="gal">'+it.photos.map(function(p){ return '<img src="'+esc(img(p))+'" alt="'+esc(it.title)+'">'; }).join("")+'</div>'+
     (it.photos.length>1 ? '<div class="mk-thumbs">'+it.photos.map(function(p,i){ return '<button type="button" data-i="'+i+'" aria-label="Photo '+(i+1)+'"><img src="'+esc(img(p))+'" alt=""></button>'; }).join("")+'</div>' : '') :
     '<div class="mk-nophoto">'+esc(t("nophoto"))+'</div>';
+  if(it.sample) gal += '<p class="mk-smp">'+esc(t("smpNote"))+' '+esc(t("smpBy"))+': <a href="'+esc(it.sample.url)+'" target="_blank" rel="noopener">'+esc(it.sample.by)+'</a>, '+esc(it.sample.lic)+', Wikimedia Commons.</p>';
   var sold = it.status === "sold";
   var d = digits(it.phone);
   var contact = d ? '<div class="mk-acts">'+(sold?'':'<a class="mk-btn" target="_blank" rel="noopener" href="https://wa.me/'+d+'?text='+encodeURIComponent(t("waMsg")(it.title))+'">'+esc(t("wa"))+'</a><a class="mk-btn ghost" href="tel:+'+d+'">'+esc(t("call"))+'</a>')+'<button class="mk-btn ghost" type="button" id="copy">'+esc(t("copy"))+'</button></div>'
