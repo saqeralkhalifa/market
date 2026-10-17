@@ -74,7 +74,7 @@ function go(url){ history.pushState(null, "", url); route(); window.scrollTo(0, 
 function load(){
   if(loading) return; loading = true;
   view.innerHTML = '<p class="mk-empty">'+esc(t("loading"))+'</p>';
-  var cols = "id,created,status,category,title,description,price,currency,condition,size,location,seller,phone,photos,source";
+  var cols = "id,created,status,category,title,description,price,currency,condition,size,location,seller,phone,photos,source,sample";
   var a = fetch("import.json?v=" + Date.now()).then(function(r){ return r.json(); }).catch(function(){ return []; });
   var b = LIVE ? fetch(SB.url+"/rest/v1/listings?select="+cols+"&order=created.desc", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
   var m = LIVE ? fetch(SB.url+"/rest/v1/status_marks?select=id,status", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
