@@ -12,7 +12,7 @@ function upPhoto(dataUrl, i){
 var T = {
  en:{kicker:"Team Bahrain community", h:"Market", sub:"New and used sports equipment in Bahrain: bikes, wheels, trainers, watches, shoes and everything for triathlon, cycling, running and swimming. Anyone can post, and a listing appears as soon as it is submitted.",
   post:"Post an item", search:"Search the market", all:"Everything", showSold:"Show sold items", sortNew:"Newest first", sortLow:"Price, low to high", sortHigh:"Price, high to low",
-  count:function(n){return n===1?"1 item":n+" items";}, empty:"Nothing matches yet. Try another category or a shorter search.", loading:"Loading the market",
+  count:function(n){return n===1?"1 item for sale":n+" items for sale";}, empty:"Nothing matches yet. Try another category or a shorter search.", loading:"Loading the market",
   sold:"Sold", nophoto:"No photo yet", onreq:"Price on request", back:"Back to the market", posted:"Posted", seller:"Seller", contact:"Contact the seller",
   wa:"WhatsApp", call:"Call", copy:"Copy link", copied:"Link copied", nophone:"The seller did not leave a number with this post. Message them in the Team Bahrain WhatsApp group.",
   waMsg:function(t){return "Hello, I saw your "+t+" on the Market at market.saqeralkhalifa.com. Is it still available?";},
@@ -32,7 +32,7 @@ var T = {
   foot:'Market <span class="sep"></span> Dr. Saqer AlKhalifa <span class="sep"></span> <a href="https://saqeralkhalifa.com/">saqeralkhalifa.com</a> <span class="sep"></span> <a href="https://saqeralkhalifa.com/privacy/">Privacy</a>'},
  ar:{kicker:"مجتمع فريق البحرين", h:"السوق", sub:"معدات رياضية جديدة ومستعملة في البحرين: دراجات وعجلات وأجهزة تدريب منزلي وساعات وأحذية وكل ما يلزم للترايثلون والدراجات والجري والسباحة. يمكن لأي شخص أن يعرض منتجه، ويظهر الإعلان فور إرساله.",
   post:"اعرض منتجك", search:"ابحث في السوق", all:"الكل", showSold:"إظهار المباع", sortNew:"الأحدث أولا", sortLow:"السعر من الأقل", sortHigh:"السعر من الأعلى",
-  count:function(n){return n+" منتج";}, empty:"لا توجد نتائج. جرّب قسما آخر أو كلمة بحث أقصر.", loading:"جار تحميل السوق",
+  count:function(n){return n+" منتج معروض للبيع";}, empty:"لا توجد نتائج. جرّب قسما آخر أو كلمة بحث أقصر.", loading:"جار تحميل السوق",
   sold:"تم البيع", nophoto:"لا توجد صورة", onreq:"السعر عند التواصل", back:"العودة إلى السوق", posted:"نشر في", seller:"البائع", contact:"تواصل مع البائع",
   wa:"واتساب", call:"اتصال", copy:"نسخ الرابط", copied:"تم نسخ الرابط", nophone:"لم يترك البائع رقما مع هذا الإعلان. راسله في مجموعة فريق البحرين على واتساب.",
   waMsg:function(t){return "مرحبا، رأيت إعلانك ("+t+") في السوق على market.saqeralkhalifa.com. هل ما زال متوفرا؟";},
@@ -107,13 +107,13 @@ function filtered(){
 }
 
 function renderList(){
-  var counts = {all:0}; items.forEach(function(it){ if(!state.sold && it.status==="sold") return; counts.all++; counts[it.category] = (counts[it.category]||0)+1; });
+  var counts = {all:0}; items.forEach(function(it){ if(it.status==="sold") return; counts.all++; counts[it.category] = (counts[it.category]||0)+1; });
   var chips = '<button class="mk-chip" data-cat="all" aria-pressed="'+(state.cat==="all")+'">'+esc(t("all"))+'<span class="n">'+counts.all+'</span></button>';
   CATS.forEach(function(c){ if(!counts[c[0]] && state.cat !== c[0]) return; chips += '<button class="mk-chip" data-cat="'+c[0]+'" aria-pressed="'+(state.cat===c[0])+'">'+esc(lab(CATS,c[0]))+'<span class="n">'+(counts[c[0]]||0)+'</span></button>'; });
   var r = filtered();
   var h = '<div class="mk-ctrl"><div class="mk-search"><input class="mk-in" id="q" type="search" placeholder="'+esc(t("search"))+'" aria-label="'+esc(t("search"))+'" value="'+esc(state.q)+'"></div>'+
     '<div class="mk-chips" role="toolbar">'+chips+'</div>'+
-    '<div class="mk-row"><span class="mk-count">'+esc(t("count")(r.length))+'</span><span class="mk-opts"><label class="mk-check"><input type="checkbox" id="sold"'+(state.sold?" checked":"")+'>'+esc(t("showSold"))+'</label>'+
+    '<div class="mk-row"><span class="mk-count">'+esc(t("count")(r.filter(function(x){ return x.status!=="sold"; }).length))+'</span><span class="mk-opts"><label class="mk-check"><input type="checkbox" id="sold"'+(state.sold?" checked":"")+'>'+esc(t("showSold"))+'</label>'+
     '<select class="mk-sel" id="sort" aria-label="Sort"><option value="new">'+esc(t("sortNew"))+'</option><option value="low">'+esc(t("sortLow"))+'</option><option value="high">'+esc(t("sortHigh"))+'</option></select></span></div></div>';
   h += r.length ? '<div class="mk-grid">'+r.map(card).join("")+'</div>' : '<p class="mk-empty">'+esc(t("empty"))+'</p>';
   h += '<p class="mk-note">'+esc(t("safety"))+'</p>';
