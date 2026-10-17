@@ -17,6 +17,8 @@ var T = {
   wa:"WhatsApp", call:"Call", copy:"Copy link", copied:"Link copied", nophone:"The seller did not leave a number with this post. Message them in the Team Bahrain WhatsApp group.",
   waMsg:function(t){return "Hello, I saw your "+t+" on the Market at market.saqeralkhalifa.com. Is it still available?";},
   safety:"The Market is a noticeboard. Listings are posted by their sellers and are not checked by anyone. See the item in person before you pay, and meet in a public place.",
+  ownQ:"Is this your item? Mark it as sold", ownQ2:"Is this your item? Mark it as available again", ownP:"Enter the WhatsApp number shown on this listing to confirm it is yours.", ownPh:"Your WhatsApp number",
+  ownWrong:"That number does not match this listing. Use the number shown above.", ownUnknown:"This listing cannot be changed here yet. Use the Report this listing link below and it will be updated for you.",
   smpBadge:"Sample photo", smpNote:"Sample photo of a similar item, not the seller's own. Ask the seller for photos of the actual item.", smpBy:"Photo",
   report:"Report this listing", fromWa:"First posted in the Team Bahrain WhatsApp group.", notfound:"This listing was not found. It may have been removed by the seller.",
   manage:"Manage your listing", manageP:"This private link lets you change the status of your listing. Keep it to yourself.", markSold:"Mark as sold", markAvail:"Mark as available", remove:"Remove listing", done:"Saved.",
@@ -35,6 +37,8 @@ var T = {
   wa:"واتساب", call:"اتصال", copy:"نسخ الرابط", copied:"تم نسخ الرابط", nophone:"لم يترك البائع رقما مع هذا الإعلان. راسله في مجموعة فريق البحرين على واتساب.",
   waMsg:function(t){return "مرحبا، رأيت إعلانك ("+t+") في السوق على market.saqeralkhalifa.com. هل ما زال متوفرا؟";},
   safety:"السوق لوحة إعلانات. ينشر البائعون إعلاناتهم بأنفسهم ولا يراجعها أحد. عاين المنتج بنفسك قبل الدفع، واختر مكانا عاما للقاء.",
+  ownQ:"هل هذا منتجك؟ اجعله مباعا", ownQ2:"هل هذا منتجك؟ اجعله متوفرا من جديد", ownP:"أدخل رقم الواتساب الظاهر في هذا الإعلان لتأكيد أنه لك.", ownPh:"رقم الواتساب",
+  ownWrong:"هذا الرقم لا يطابق الإعلان. استخدم الرقم الظاهر أعلاه.", ownUnknown:"لا يمكن تعديل هذا الإعلان من هنا بعد. استخدم رابط الإبلاغ عن الإعلان في الأسفل وسيتم تحديثه.",
   smpBadge:"صورة توضيحية", smpNote:"صورة توضيحية لمنتج مشابه وليست للمنتج المعروض. اطلب من البائع صورا للمنتج نفسه.", smpBy:"الصورة",
   report:"الإبلاغ عن هذا الإعلان", fromWa:"نشر أولا في مجموعة فريق البحرين على واتساب.", notfound:"لم يتم العثور على هذا الإعلان. ربما حذفه البائع.",
   manage:"إدارة إعلانك", manageP:"هذا الرابط الخاص يتيح لك تغيير حالة إعلانك. احتفظ به لنفسك.", markSold:"تم البيع", markAvail:"متوفر", remove:"حذف الإعلان", done:"تم الحفظ.",
@@ -73,7 +77,9 @@ function load(){
   var cols = "id,created,status,category,title,description,price,currency,condition,size,location,seller,phone,photos,source";
   var a = fetch("import.json?v=" + Date.now()).then(function(r){ return r.json(); }).catch(function(){ return []; });
   var b = LIVE ? fetch(SB.url+"/rest/v1/listings?select="+cols+"&order=created.desc", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
-  Promise.all([a,b]).then(function(x){ loading = false; var l = x[1].concat(x[0]); l.sort(function(p,q){ return p.created < q.created ? 1 : -1; }); items = l; route(); });
+  var m = LIVE ? fetch(SB.url+"/rest/v1/status_marks?select=id,status", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
+  Promise.all([a,b,m]).then(function(x){ loading = false; var mk = {}; x[2].forEach(function(r){ mk[r.id] = r.status; });
+    var l = x[1].concat(x[0]).filter(function(it){ return mk[it.id] !== "removed"; }); l.forEach(function(it){ if(mk[it.id]) it.status = mk[it.id]; }); l.sort(function(p,q){ return p.created < q.created ? 1 : -1; }); items = l; route(); });
 }
 function route(){
   var p = params();
@@ -149,6 +155,9 @@ function renderItem(id, key){
     '<p class="mk-note">'+esc(t("safety"))+' <a href="mailto:contact@saqeralkhalifa.com?subject='+encodeURIComponent("Market report "+it.id)+'">'+esc(t("report"))+'</a></p>'+
     (key?'<div class="mk-manage"><div class="mk-seller" style="margin:0;padding:0;border:0"><div class="lbl">'+esc(t("manage"))+'</div></div><p class="mk-note" style="margin-top:8px">'+esc(t("manageP"))+'</p><div class="mk-acts">'+
       '<button class="mk-btn" type="button" data-st="'+(sold?"available":"sold")+'">'+esc(sold?t("markAvail"):t("markSold"))+'</button><button class="mk-btn ghost" type="button" data-st="removed">'+esc(t("remove"))+'</button></div><p class="mk-note" id="mst"></p></div>':'')+
+    (!key && d ? '<details class="mk-own"><summary>'+esc(sold?t("ownQ2"):t("ownQ"))+'</summary><p class="mk-note">'+esc(t("ownP"))+'</p>'+
+      '<input class="mk-in" id="ownph" type="tel" inputmode="tel" autocomplete="tel" placeholder="'+esc(t("ownPh"))+'" aria-label="'+esc(t("ownPh"))+'">'+
+      '<div class="mk-acts"><button class="mk-btn" type="button" data-own="'+(sold?"available":"sold")+'">'+esc(sold?t("markAvail"):t("markSold"))+'</button><button class="mk-btn ghost" type="button" data-own="removed">'+esc(t("remove"))+'</button></div><p class="mk-note" id="ownst" role="status"></p></details>' : '')+
     '</div></div>';
   view.innerHTML = h;
   var g = document.getElementById("gal");
@@ -160,6 +169,18 @@ function renderItem(id, key){
       document.getElementById("mst").textContent = j.ok ? t("done") : t("errNet");
       if(j.ok){ if(st==="removed"){ items = items.filter(function(x){ return x.id!==it.id; }); } else it.status = st; setTimeout(function(){ route(); }, 600); }
     }).catch(function(){ document.getElementById("mst").textContent = t("errNet"); b.disabled = false; });
+  }); });
+  Array.prototype.forEach.call(view.querySelectorAll("[data-own]"), function(b){ b.addEventListener("click", function(){
+    var st = b.getAttribute("data-own"), out = document.getElementById("ownst"), ph = document.getElementById("ownph").value;
+    if(String(ph).replace(/\D/g,"").length < 8){ out.textContent = t("errPhone"); return; }
+    b.disabled = true;
+    rpc("mark_status", {p_id:it.id, p_phone:ph, p_status:st}).then(function(j){
+      b.disabled = false;
+      if(!j || !j.ok){ out.textContent = j && j.error === "unknown" ? t("ownUnknown") : j && j.error === "phone" ? t("ownWrong") : t("errNet"); return; }
+      out.textContent = t("done");
+      if(st==="removed"){ items = items.filter(function(x){ return x.id!==it.id; }); setTimeout(function(){ go("./"); }, 700); }
+      else { it.status = st; setTimeout(function(){ route(); }, 700); }
+    }).catch(function(){ b.disabled = false; out.textContent = t("errNet"); });
   }); });
 }
 

@@ -956,7 +956,7 @@
  {
   "id": "wa6612",
   "created": "2026-09-17T13:23:52+03:00",
-  "status": "available",
+  "status": "sold",
   "category": "trainers",
   "title": "Garmin Tacx smart trainer with Ultegra cassette",
   "description": "Home trainer in good condition, fitted with a Shimano Ultegra 11 speed cassette.",
@@ -971,31 +971,6 @@
    "img/wa6612-1.jpg",
    "img/wa6612-2.jpg",
    "img/wa6612-3.jpg"
-  ],
-  "source": "whatsapp"
- },
- {
-  "id": "wa6615",
-  "created": "2026-09-17T13:37:58+03:00",
-  "status": "available",
-  "category": "bikes",
-  "title": "Specialized Tarmac SL6 Sport (2021), size 52",
-  "description": "In new condition. Shimano 105, carbon fiber frame, carbon black color.",
-  "price": 780,
-  "currency": "BHD",
-  "condition": "like-new",
-  "size": "",
-  "location": "Bahrain",
-  "seller": "Bu Ali",
-  "phone": "+97333445522",
-  "photos": [
-   "img/wa6615-1.jpg",
-   "img/wa6615-2.jpg",
-   "img/wa6615-3.jpg",
-   "img/wa6615-4.jpg",
-   "img/wa6615-5.jpg",
-   "img/wa6615-6.jpg",
-   "img/wa6615-7.jpg"
   ],
   "source": "whatsapp"
  },
