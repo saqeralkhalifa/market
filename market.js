@@ -76,7 +76,7 @@ var W = {
   aSubmit:"Post my request", aErrTitle:"Please write what you are looking for.", aOk:"Your request is live.", aView:"View your request", aKeep:"Save this private link. You will need it to mark the request as found or to remove it:",
   wOwnQ:"Is this your request? Mark it as found", wOwnQ2:"Is this your request? Open it again", wOwnP:"Enter the WhatsApp number shown on this request to confirm it is yours.",
   markFound:"Mark as found", renew:"Still looking, renew for 30 days", removeR:"Remove request", wManage:"Manage your request", wManageP:"This private link lets you change your request. Keep it to yourself.",
-  wNotfound:"This request was not found. It may have been removed.", reportW:"Report this request", until:"Open until",
+  wNotfound:"This request was not found. It may have been removed.", reportW:"Report this request", wSmpNote:"Sample photo showing the kind of item wanted, not a photo from the buyer.", until:"Open until",
   wSafety:"Requests are posted by the people looking for the items and are not checked by anyone. See the item in person before you pay, and meet in a public place."},
  ar:{tabSale:"للبيع", tabWant:"مطلوب", ask:"اطلب منتجا", backW:"العودة إلى المطلوب",
   wSub:"تبحث عن شيء لا تجده معروضا للبيع؟ انشر ما تحتاجه، وسيتواصل معك على واتساب أصحاب المحلات والأعضاء الذين يملكونه. يبقى الطلب منشورا 30 يوما.",
@@ -97,7 +97,7 @@ var W = {
   aSubmit:"انشر الطلب", aErrTitle:"اكتب ما الذي تبحث عنه.", aOk:"طلبك منشور الآن.", aView:"عرض طلبك", aKeep:"احفظ هذا الرابط الخاص، ستحتاجه لتغيير الحالة إلى تم إيجاده أو لحذف الطلب:",
   wOwnQ:"هل هذا طلبك؟ اجعله تم إيجاده", wOwnQ2:"هل هذا طلبك؟ افتحه من جديد", wOwnP:"أدخل رقم الواتساب الظاهر في هذا الطلب لتأكيد أنه لك.",
   markFound:"تم إيجاده", renew:"ما زلت أبحث، جدده 30 يوما", removeR:"حذف الطلب", wManage:"إدارة طلبك", wManageP:"هذا الرابط الخاص يتيح لك تغيير طلبك. احتفظ به لنفسك.",
-  wNotfound:"لم يتم العثور على هذا الطلب. ربما تم حذفه.", reportW:"الإبلاغ عن هذا الطلب", until:"مفتوح حتى",
+  wNotfound:"لم يتم العثور على هذا الطلب. ربما تم حذفه.", reportW:"الإبلاغ عن هذا الطلب", wSmpNote:"صورة توضيحية لنوع المنتج المطلوب، وليست من صاحب الطلب.", until:"مفتوح حتى",
   wSafety:"ينشر أصحاب الطلبات طلباتهم بأنفسهم ولا يراجعها أحد. عاين المنتج بنفسك قبل الدفع، واختر مكانا عاما للقاء."}
 };
 for(var wl in W){ for(var wk in W[wl]) T[wl][wk] = W[wl][wk]; }
@@ -124,7 +124,7 @@ function load(){
   var a = fetch("import.json?v=" + Date.now()).then(function(r){ return r.json(); }).catch(function(){ return []; });
   var b = LIVE ? fetch(SB.url+"/rest/v1/listings?select="+cols+"&order=created.desc", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
   var m = LIVE ? fetch(SB.url+"/rest/v1/status_marks?select=id,status", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
-  var wq = LIVE ? fetch(SB.url+"/rest/v1/wanted?select=id,created,expires,status,category,title,description,budget,currency,want_cond,size,location,name,phone,is_shop,shop_name&order=created.desc", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
+  var wq = LIVE ? fetch(SB.url+"/rest/v1/wanted?select=id,created,expires,status,category,title,description,budget,currency,want_cond,size,location,name,phone,is_shop,shop_name,photo,sample&order=created.desc", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
   var rq = LIVE ? fetch(SB.url+"/rest/v1/wanted_replies?select=wanted_id", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
   Promise.all([a,b,m,wq,rq]).then(function(x){ loading = false; var mk = {}; wants = x[3]; rcount = {}; x[4].forEach(function(r){ rcount[r.wanted_id] = (rcount[r.wanted_id]||0)+1; }); x[2].forEach(function(r){ mk[r.id] = r.status; });
     var l = x[1].concat(x[0]).filter(function(it){ return mk[it.id] !== "removed"; }); l.forEach(function(it){ if(mk[it.id]) it.status = mk[it.id]; }); l.sort(function(p,q){ return p.created < q.created ? 1 : -1; }); items = l; route(); });
@@ -320,6 +320,7 @@ function wcard(w){
   var n = rcount[w.id] || 0, found = w.status === "found";
   var meta = [lab(WCONDS, w.want_cond), w.size, w.location].filter(Boolean).join(L()==="ar" ? "، " : ", ");
   return '<a class="mk-wcard'+(found?' found':'')+'" href="?want='+encodeURIComponent(w.id)+'" data-want="'+esc(w.id)+'">'+
+    (w.photo?'<span class="mk-ph mk-wph"><img loading="lazy" src="'+esc(w.photo)+'" alt="'+esc(w.title)+'">'+(w.sample?'<span class="mk-badge smp">'+esc(t("smpBadge"))+'</span>':'')+'</span>':'')+
     '<span class="mk-wtop"><span class="mk-wcat">'+esc(lab(CATS, w.category))+'</span>'+(found?'<span class="mk-wst">'+esc(t("found"))+'</span>':'')+'</span>'+
     '<span class="mk-ct" dir="auto">'+esc(w.title)+'</span><span class="mk-wb">'+esc(budget(w))+'</span>'+
     (meta?'<span class="mk-meta" dir="auto">'+esc(meta)+'</span>':'')+
@@ -360,7 +361,9 @@ function renderWant(id, key){
   var stateLine = found ? '<span class="mk-soldline ok">'+esc(t("found"))+'</span>' : (!open ? '<span class="mk-soldline">'+esc(t("expired"))+'</span>' : '');
   var btns = function(attr){ return (found || !open ? '<button class="mk-btn" type="button" '+attr+'="open">'+esc(t("renew"))+'</button>' : '<button class="mk-btn" type="button" '+attr+'="found">'+esc(t("markFound"))+'</button><button class="mk-btn ghost" type="button" '+attr+'="open">'+esc(t("renew"))+'</button>')+
     '<button class="mk-btn ghost" type="button" '+attr+'="removed">'+esc(t("removeR"))+'</button>'; };
-  var left = '<span class="mk-wcat">'+esc(lab(CATS, w.category))+'</span><h1 dir="auto" style="margin-top:8px">'+esc(w.title)+'</h1>'+stateLine+
+  var pic = w.photo ? '<div class="mk-wpic"><img src="'+esc(w.photo)+'" alt="'+esc(w.title)+'">'+(w.sample?'<span class="mk-badge smp">'+esc(t("smpBadge"))+'</span>':'')+'</div>'+
+    (w.sample?'<p class="mk-smp">'+esc(t("wSmpNote"))+' '+esc(t("smpBy"))+': <a href="'+esc(w.sample.url)+'" target="_blank" rel="noopener">'+esc(w.sample.by)+'</a>, '+esc(w.sample.lic)+(w.sample.src?', '+esc(w.sample.src):'')+'.</p>':'') : '';
+  var left = pic + '<span class="mk-wcat"'+(w.photo?' style="display:block;margin-top:16px"':'')+'>'+esc(lab(CATS, w.category))+'</span><h1 dir="auto" style="margin-top:8px">'+esc(w.title)+'</h1>'+stateLine+
     '<div class="mk-bigprice">'+esc(budget(w))+'</div>'+
     '<div class="mk-facts"><span class="mk-fact">'+esc(lab(WCONDS, w.want_cond))+'</span>'+(w.size?'<span class="mk-fact" dir="auto">'+esc(w.size)+'</span>':'')+(w.location?'<span class="mk-fact" dir="auto">'+esc(w.location)+'</span>':'')+
     '<span class="mk-fact">'+esc(t("posted"))+' '+esc(date(w.created))+'</span>'+(open?'<span class="mk-fact">'+esc(t("until"))+' '+esc(date(w.expires))+'</span>':'')+'</div>'+
