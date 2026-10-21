@@ -473,6 +473,47 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 .mk-ok{border:1px solid #C9D6C2;background:#EAEFE3;padding:16px;margin-top:24px;font-size:17px;}
 .mk-ok input{margin-top:8px;}
 .mk-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+
+/* wanted, 21 Oct 2026 */
+[hidden]{display:none !important;}
+.mk-tabs{display:flex;border-bottom:1px solid #D3C0A0;margin-top:24px;}
+.mk-tabs a{min-height:48px;display:inline-flex;align-items:center;gap:8px;padding:12px 20px;font-size:19px;color:#4A3728;text-decoration:none;border-bottom:3px solid transparent;margin-bottom:-1px;}
+[dir="rtl"] .mk-tabs a{font-family:'Noto Naskh Arabic',serif;font-size:18px;}
+.mk-tabs a:hover{background:#EFE4CE;}
+.mk-tabs a[aria-current="page"]{color:#152A55;border-bottom-color:#152A55;font-weight:600;}
+.mk-tabs .n{font-size:15px;font-weight:400;color:#6F5D4A;}
+.mk-shop{display:inline-block;margin-inline-start:8px;padding:1px 8px;border:1px solid #7D5F27;color:#7D5F27;background:#FFFDF6;font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;border-radius:2px;vertical-align:middle;line-height:1.7;}
+[dir="rtl"] .mk-shop{font-family:'Noto Naskh Arabic',serif;font-size:13px;letter-spacing:0;}
+.mk-badge.shop{inset-inline-start:auto;inset-inline-end:8px;background:#7D5F27;}
+.mk-seller .sub{font-size:16px;color:#6F5D4A;}
+.mk-find{margin:0 0 8px;font-size:18px;color:#4A3728;}
+.mk-find a{color:#7D5F27;}
+.mk-wgrid{display:grid;grid-template-columns:1fr;gap:12px;padding:24px 0;}
+@media (min-width:768px){.mk-wgrid{grid-template-columns:1fr 1fr;gap:16px;}}
+@media (min-width:1024px){.mk-wgrid{grid-template-columns:repeat(3,1fr);}}
+.mk-wcard{display:flex;flex-direction:column;gap:6px;background:#FFFDF6;border:1px solid #E2D5BB;border-inline-start:4px solid #1E3A78;padding:16px;text-decoration:none;color:#4A3728;border-radius:2px;min-width:0;transition:background-color 120ms;}
+.mk-wcard:hover{background:#FAF5EA;}
+.mk-wcard.found{border-inline-start-color:#D3C0A0;}
+.mk-wcard.found .mk-ct,.mk-wcard.found .mk-wb{color:#6F5D4A;}
+.mk-wtop{display:flex;justify-content:space-between;gap:8px;align-items:center;}
+.mk-wcat{font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#7D5F27;}
+[dir="rtl"] .mk-wcat{font-family:'Noto Naskh Arabic',serif;font-size:14px;letter-spacing:0;text-transform:none;}
+.mk-wst{background:#2F5D3A;color:#FFFDF6;padding:2px 8px;font-size:14px;border-radius:2px;}
+.mk-wb{font-size:17px;font-weight:700;color:#1E3A78;}
+.mk-wfoot{display:flex;flex-wrap:wrap;align-items:center;gap:4px 0;margin-top:auto;padding-top:10px;border-top:1px solid #EFE4CE;font-size:15px;color:#6F5D4A;}
+.mk-wn{margin-inline-start:auto;padding-inline-start:12px;}
+.mk-soldline.ok{background:#2F5D3A;}
+.mk-h2{font-family:'EB Garamond',Georgia,serif;font-weight:400;font-size:24px;line-height:1.2;color:#152A55;}
+[dir="rtl"] .mk-h2{font-family:'Noto Naskh Arabic',serif;font-weight:600;font-size:22px;line-height:1.5;}
+.mk-reply{border:1px solid #E2D5BB;background:#FFFDF6;padding:16px;margin-top:12px;border-radius:2px;}
+.mk-reply .nm{font-size:18px;}
+.mk-reply .sub{font-size:15px;color:#6F5D4A;}
+.mk-reply .pr{font-weight:700;color:#1E3A78;margin-top:4px;font-size:18px;}
+.mk-reply p{margin-top:8px;font-size:17px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;}
+.mk-reply .ph{font-size:17px;margin-top:6px;direction:ltr;unicode-bidi:isolate;}
+.mk-reply .dt{font-size:14px;color:#6F5D4A;margin-top:8px;}
+.mk-have{margin-top:24px;border:1px solid #E2D5BB;border-inline-start:4px solid #1E3A78;background:#FFFDF6;padding:16px;}
+.mk-have .mk-f{margin-top:16px;}
 footer.site{font-size:15px;}
 
 footer.site .sep{display:inline-block;width:12px;}
@@ -485,12 +526,12 @@ footer.site .sep{display:inline-block;width:12px;}
 <p class="kicker" id="t-kicker"></p>
 <h1 id="t-h"></h1>
 <p class="sub" id="t-sub"></p>
-<div class="mk-cta"><a class="mk-btn" id="t-post" href="?post=1"></a></div>
+<div class="mk-cta"><a class="mk-btn" id="t-post" href="?post=1"></a><a class="mk-btn ghost" id="t-ask" href="?ask=1"></a></div>
 </div></section>
 <div class="mk-wrap" id="view"></div>
 <div class="mk-wrap"><footer class="site"><p id="t-foot"></p></footer></div>
 </main>
-<script src="market.js?v=20261017c"></script>
+<script src="market.js?v=20261021a"></script>
 <script>
 /* MCXL: cross-property links carry the current language, because localStorage does not cross origins. */
 (function(){

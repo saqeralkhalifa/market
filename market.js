@@ -56,9 +56,55 @@ var CATS = [
  ["shoes","Shoes","الأحذية"],["apparel","Clothing and tri suits","الملابس وبدلات الترايثلون"],["helmets","Helmets","الخوذ"],["swim","Swim","السباحة"],["run","Run","الجري"],
  ["parts","Parts and accessories","القطع والإكسسوارات"],["nutrition","Nutrition","التغذية"],["entries","Race entries","تذاكر السباقات"],["other","Other","أخرى"]];
 var CONDS = [["new","New","جديد"],["like-new","Like new","شبه جديد"],["used","Used","مستعمل"],["for-parts","For parts or repair","للقطع أو الإصلاح"]];
+var W = {
+ en:{tabSale:"For sale", tabWant:"Wanted", ask:"Post a request", backW:"Back to wanted",
+  wSub:"Looking for something you cannot find for sale? Post what you need, and shops and members who have it can reply to you on WhatsApp. Requests stay up for 30 days.",
+  wCount:function(n){return n===1?"1 open request":n+" open requests";}, wEmpty:"No requests here yet. Be the first to post what you are looking for.",
+  wSearch:"Search the requests", showFound:"Show requests already found", cantFind:"Cannot find what you need?",
+  budget:"Budget", nobudget:"Open to offers", found:"Found", expired:"Expired", buyer:"Posted by", shop:"Shop",
+  replies:function(n){return n===0?"No replies yet":n===1?"1 reply":n+" replies";},
+  haveH:"I have this", haveP:"Leave your details and a price if you like. Your reply is shown on this request, and WhatsApp opens with a message to the person looking for it.",
+  rName:"Your name", rShop:"I am replying for a shop", rShopName:"Shop name", rPhone:"Your WhatsApp number", rPrice:"Your price (optional)", rNote:"Note (optional)", rNoteH:"Condition, size, or where the item can be seen",
+  rSend:"Send reply and open WhatsApp", rDone:"Your reply is posted. If WhatsApp did not open, use the button below.", rOpen:"Open WhatsApp",
+  rErrGone:"This request is closed and cannot take new replies.", rErrFull:"This request has reached its limit of replies.", rNone:"Nobody has replied yet. If you have this item, use the form to reply.",
+  waAsk:function(t){return "Hello, I saw your request for "+t+" on the Market at market.saqeralkhalifa.com. I have one.";},
+  waPrice:"My price is", waBuyer:"WhatsApp the buyer", waReply:function(t){return "Hello, I saw your reply to my request for "+t+" on the Market.";},
+  askH:"Post a request", askP:"Tell people what you are looking for. Shops and members who have it can reply to you on WhatsApp. Your request stays up for 30 days, and you can renew it.",
+  aTitle:"What are you looking for?", aTitleH:"Brand, model and size, for example Garmin Forerunner 965, or a 955 in good condition", aCond:"New or used", aBudget:"Budget", aBudgetH:"Leave empty if you are open to offers",
+  aDesc:"Details", aDescH:"Anything that helps, such as size, color, year or when you need it", aPhoneH:"Sellers will contact you on this number. It is shown on the request.",
+  fShop:"I am posting for a shop", fShopName:"Shop name", aConsent:"I agree that my name, number and request are shown publicly on this page.",
+  aSubmit:"Post my request", aErrTitle:"Please write what you are looking for.", aOk:"Your request is live.", aView:"View your request", aKeep:"Save this private link. You will need it to mark the request as found or to remove it:",
+  wOwnQ:"Is this your request? Mark it as found", wOwnQ2:"Is this your request? Open it again", wOwnP:"Enter the WhatsApp number shown on this request to confirm it is yours.",
+  markFound:"Mark as found", renew:"Still looking, renew for 30 days", removeR:"Remove request", wManage:"Manage your request", wManageP:"This private link lets you change your request. Keep it to yourself.",
+  wNotfound:"This request was not found. It may have been removed.", until:"Open until",
+  wSafety:"Requests are posted by the people looking for the items and are not checked by anyone. See the item in person before you pay, and meet in a public place."},
+ ar:{tabSale:"للبيع", tabWant:"مطلوب", ask:"اطلب منتجا", backW:"العودة إلى المطلوب",
+  wSub:"تبحث عن شيء لا تجده معروضا للبيع؟ انشر ما تحتاجه، وسيتواصل معك على واتساب أصحاب المحلات والأعضاء الذين يملكونه. يبقى الطلب منشورا 30 يوما.",
+  wCount:function(n){return n+" طلب مفتوح";}, wEmpty:"لا توجد طلبات هنا بعد. كن أول من ينشر ما يبحث عنه.",
+  wSearch:"ابحث في الطلبات", showFound:"إظهار الطلبات التي تم إيجادها", cantFind:"لم تجد ما تبحث عنه؟",
+  budget:"الميزانية", nobudget:"مفتوح للعروض", found:"تم إيجاده", expired:"انتهت مدته", buyer:"صاحب الطلب", shop:"محل",
+  replies:function(n){return n===0?"لا توجد ردود بعد":n===1?"رد واحد":n===2?"ردان":n+" ردود";},
+  haveH:"عندي هذا المنتج", haveP:"اترك بياناتك وسعرا إن أردت. يظهر ردك على هذا الطلب، ويفتح واتساب برسالة إلى صاحب الطلب.",
+  rName:"اسمك", rShop:"أرد باسم محل", rShopName:"اسم المحل", rPhone:"رقم الواتساب", rPrice:"سعرك (اختياري)", rNote:"ملاحظة (اختيارية)", rNoteH:"الحالة أو المقاس أو مكان معاينة المنتج",
+  rSend:"أرسل الرد وافتح واتساب", rDone:"تم نشر ردك. إذا لم يفتح واتساب فاستخدم الزر أدناه.", rOpen:"افتح واتساب",
+  rErrGone:"هذا الطلب مغلق ولا يقبل ردودا جديدة.", rErrFull:"وصل هذا الطلب إلى الحد الأقصى من الردود.", rNone:"لم يرد أحد بعد. إذا كان المنتج عندك فاستخدم النموذج للرد.",
+  waAsk:function(t){return "مرحبا، رأيت طلبك ("+t+") في السوق على market.saqeralkhalifa.com. لدي ما تبحث عنه.";},
+  waPrice:"سعري", waBuyer:"راسل صاحب الطلب على واتساب", waReply:function(t){return "مرحبا، رأيت ردك على طلبي ("+t+") في السوق.";},
+  askH:"اطلب منتجا", askP:"اكتب ما تبحث عنه، وسيتواصل معك على واتساب من يملكه من المحلات والأعضاء. يبقى طلبك منشورا 30 يوما ويمكنك تجديده.",
+  aTitle:"ما الذي تبحث عنه؟", aTitleH:"الماركة والموديل والمقاس، مثل Garmin Forerunner 965 أو 955 بحالة جيدة", aCond:"جديد أو مستعمل", aBudget:"الميزانية", aBudgetH:"اتركها فارغة إذا كنت تقبل العروض",
+  aDesc:"التفاصيل", aDescH:"أي معلومة تساعد، مثل المقاس أو اللون أو سنة الصنع أو موعد الحاجة", aPhoneH:"سيتواصل معك البائعون على هذا الرقم، وهو يظهر في الطلب.",
+  fShop:"أنشر باسم محل", fShopName:"اسم المحل", aConsent:"أوافق على ظهور اسمي ورقمي وطلبي للعامة في هذه الصفحة.",
+  aSubmit:"انشر الطلب", aErrTitle:"اكتب ما الذي تبحث عنه.", aOk:"طلبك منشور الآن.", aView:"عرض طلبك", aKeep:"احفظ هذا الرابط الخاص، ستحتاجه لتغيير الحالة إلى تم إيجاده أو لحذف الطلب:",
+  wOwnQ:"هل هذا طلبك؟ اجعله تم إيجاده", wOwnQ2:"هل هذا طلبك؟ افتحه من جديد", wOwnP:"أدخل رقم الواتساب الظاهر في هذا الطلب لتأكيد أنه لك.",
+  markFound:"تم إيجاده", renew:"ما زلت أبحث، جدده 30 يوما", removeR:"حذف الطلب", wManage:"إدارة طلبك", wManageP:"هذا الرابط الخاص يتيح لك تغيير طلبك. احتفظ به لنفسك.",
+  wNotfound:"لم يتم العثور على هذا الطلب. ربما تم حذفه.", until:"مفتوح حتى",
+  wSafety:"ينشر أصحاب الطلبات طلباتهم بأنفسهم ولا يراجعها أحد. عاين المنتج بنفسك قبل الدفع، واختر مكانا عاما للقاء."}
+};
+for(var wl in W){ for(var wk in W[wl]) T[wl][wk] = W[wl][wk]; }
+var WCONDS = [["any","New or used","جديد أو مستعمل"],["new","New only","جديد فقط"],["used","Used is fine","مستعمل"]];
 var MON = {en:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], ar:["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"]};
 
-var loading = false, items = null, state = {cat:"all", q:"", sold:true, sort:"new"}, view = document.getElementById("view");
+var loading = false, items = null, wants = null, rcount = {}, state = {cat:"all", q:"", sold:true, sort:"new", view:"sale", wcat:"all", wq:"", found:false}, view = document.getElementById("view");
 function L(){ return document.documentElement.lang === "ar" ? "ar" : "en"; }
 function t(k){ return T[L()][k]; }
 function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
@@ -74,18 +120,25 @@ function go(url){ history.pushState(null, "", url); route(); window.scrollTo(0, 
 function load(){
   if(loading) return; loading = true;
   view.innerHTML = '<p class="mk-empty">'+esc(t("loading"))+'</p>';
-  var cols = "id,created,status,category,title,description,price,currency,condition,size,location,seller,phone,photos,source,sample";
+  var cols = "id,created,status,category,title,description,price,currency,condition,size,location,seller,phone,photos,source,sample,is_shop,shop_name";
   var a = fetch("import.json?v=" + Date.now()).then(function(r){ return r.json(); }).catch(function(){ return []; });
   var b = LIVE ? fetch(SB.url+"/rest/v1/listings?select="+cols+"&order=created.desc", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
   var m = LIVE ? fetch(SB.url+"/rest/v1/status_marks?select=id,status", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
-  Promise.all([a,b,m]).then(function(x){ loading = false; var mk = {}; x[2].forEach(function(r){ mk[r.id] = r.status; });
+  var wq = LIVE ? fetch(SB.url+"/rest/v1/wanted?select=id,created,expires,status,category,title,description,budget,currency,want_cond,size,location,name,phone,is_shop,shop_name&order=created.desc", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
+  var rq = LIVE ? fetch(SB.url+"/rest/v1/wanted_replies?select=wanted_id", {headers:sbh({})}).then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }) : Promise.resolve([]);
+  Promise.all([a,b,m,wq,rq]).then(function(x){ loading = false; var mk = {}; wants = x[3]; rcount = {}; x[4].forEach(function(r){ rcount[r.wanted_id] = (rcount[r.wanted_id]||0)+1; }); x[2].forEach(function(r){ mk[r.id] = r.status; });
     var l = x[1].concat(x[0]).filter(function(it){ return mk[it.id] !== "removed"; }); l.forEach(function(it){ if(mk[it.id]) it.status = mk[it.id]; }); l.sort(function(p,q){ return p.created < q.created ? 1 : -1; }); items = l; route(); });
 }
 function route(){
   var p = params();
-  document.getElementById("hero").hidden = !!(p.get("item") || p.get("post"));
+  state.view = (p.get("view") === "wanted" || p.get("want") || p.get("ask")) ? "wanted" : "sale";
+  document.getElementById("hero").hidden = !!(p.get("item") || p.get("post") || p.get("ask") || p.get("want"));
+  heroTexts();
   if(p.get("post")) return renderForm();
-  if(items === null){ load(); return; }
+  if(p.get("ask")) return renderAsk();
+  if(items === null || wants === null){ load(); return; }
+  if(p.get("want")) return renderWant(p.get("want"), p.get("key"));
+  if(state.view === "wanted"){ if(p.get("cat")) state.wcat = p.get("cat"); return renderWanted(); }
   if(p.get("item")) return renderItem(p.get("item"), p.get("key"));
   if(p.get("cat")) state.cat = p.get("cat");
   renderList();
@@ -111,11 +164,13 @@ function renderList(){
   var chips = '<button class="mk-chip" data-cat="all" aria-pressed="'+(state.cat==="all")+'">'+esc(t("all"))+'<span class="n">'+counts.all+'</span></button>';
   CATS.forEach(function(c){ if(!counts[c[0]] && state.cat !== c[0]) return; chips += '<button class="mk-chip" data-cat="'+c[0]+'" aria-pressed="'+(state.cat===c[0])+'">'+esc(lab(CATS,c[0]))+'<span class="n">'+(counts[c[0]]||0)+'</span></button>'; });
   var r = filtered();
-  var h = '<div class="mk-ctrl"><div class="mk-search"><input class="mk-in" id="q" type="search" placeholder="'+esc(t("search"))+'" aria-label="'+esc(t("search"))+'" value="'+esc(state.q)+'"></div>'+
+  document.title = "Market: new and used sports equipment in Bahrain";
+  var h = tabs() + '<div class="mk-ctrl"><div class="mk-search"><input class="mk-in" id="q" type="search" placeholder="'+esc(t("search"))+'" aria-label="'+esc(t("search"))+'" value="'+esc(state.q)+'"></div>'+
     '<div class="mk-chips" role="toolbar">'+chips+'</div>'+
     '<div class="mk-row"><span class="mk-count">'+esc(t("count")(r.filter(function(x){ return x.status!=="sold"; }).length))+'</span><span class="mk-opts"><label class="mk-check"><input type="checkbox" id="sold"'+(state.sold?" checked":"")+'>'+esc(t("showSold"))+'</label>'+
     '<select class="mk-sel" id="sort" aria-label="Sort"><option value="new">'+esc(t("sortNew"))+'</option><option value="low">'+esc(t("sortLow"))+'</option><option value="high">'+esc(t("sortHigh"))+'</option></select></span></div></div>';
   h += r.length ? '<div class="mk-grid">'+r.map(card).join("")+'</div>' : '<p class="mk-empty">'+esc(t("empty"))+'</p>';
+  h += '<p class="mk-find">'+esc(t("cantFind"))+' <a href="?ask=1" data-ask="1">'+esc(t("ask"))+'</a></p>';
   h += '<p class="mk-note">'+esc(t("safety"))+'</p>';
   view.innerHTML = h;
   document.getElementById("sort").value = state.sort;
@@ -129,7 +184,7 @@ function renderList(){
 function card(it){
   var ph = it.photos && it.photos.length ? '<img loading="lazy" src="'+esc(img(it.photos[0]))+'" alt="'+esc(it.title)+'">' : '<span class="none">'+esc(lab(CATS,it.category))+'</span>';
   var sold = it.status === "sold";
-  return '<a class="mk-card'+(sold?" sold":"")+'" href="?item='+encodeURIComponent(it.id)+'" data-item="'+esc(it.id)+'"><span class="mk-ph">'+ph+(sold?'<span class="mk-badge">'+esc(t("sold"))+'</span>':'')+(it.sample?'<span class="mk-badge smp">'+esc(t("smpBadge"))+'</span>':'')+'</span>'+
+  return '<a class="mk-card'+(sold?" sold":"")+'" href="?item='+encodeURIComponent(it.id)+'" data-item="'+esc(it.id)+'"><span class="mk-ph">'+ph+(sold?'<span class="mk-badge">'+esc(t("sold"))+'</span>':'')+(it.sample?'<span class="mk-badge smp">'+esc(t("smpBadge"))+'</span>':'')+(it.is_shop?'<span class="mk-badge shop">'+esc(t("shop"))+'</span>':'')+'</span>'+
     '<span class="mk-cb"><span class="mk-price">'+esc(price(it))+'</span><span class="mk-ct" dir="auto">'+esc(it.title)+'</span><span class="mk-meta">'+esc(lab(CONDS,it.condition))+(it.location?', '+esc(it.location):'')+'</span></span></a>';
 }
 
@@ -150,7 +205,7 @@ function renderItem(id, key){
     '<h1 dir="auto">'+esc(it.title)+'</h1>'+(sold?'<span class="mk-soldline">'+esc(t("sold"))+'</span>':'')+'<div class="mk-bigprice">'+esc(price(it))+'</div>'+
     '<div class="mk-facts"><span class="mk-fact">'+esc(lab(CATS,it.category))+'</span><span class="mk-fact">'+esc(lab(CONDS,it.condition))+'</span>'+(it.size?'<span class="mk-fact">'+esc(it.size)+'</span>':'')+(it.location?'<span class="mk-fact">'+esc(it.location)+'</span>':'')+'<span class="mk-fact">'+esc(t("posted"))+' '+esc(date(it.created))+'</span></div>'+
     (it.description?'<div class="mk-desc" dir="auto">'+esc(it.description)+'</div>':'')+
-    '<div class="mk-seller"><div class="lbl">'+esc(t("seller"))+'</div>'+(it.seller?'<div class="nm" dir="auto">'+esc(it.seller)+'</div>':'')+(d?'<div class="ph">'+esc(pretty(it.phone))+'</div>':'')+contact+'</div>'+
+    '<div class="mk-seller"><div class="lbl">'+esc(t("seller"))+'</div>'+(it.seller||it.shop_name?'<div class="nm" dir="auto">'+esc(it.shop_name||it.seller)+shopTag(it)+'</div>'+(it.shop_name&&it.seller?'<div class="sub" dir="auto">'+esc(it.seller)+'</div>':''):'')+(d?'<div class="ph">'+esc(pretty(it.phone))+'</div>':'')+contact+'</div>'+
     (it.source==="whatsapp"?'<p class="mk-note">'+esc(t("fromWa"))+'</p>':'')+(it.source==="instagram"?'<p class="mk-note">'+esc(t("fromIg"))+'</p>':'')+
     '<p class="mk-note">'+esc(t("safety"))+' <a href="mailto:contact@saqeralkhalifa.com?subject='+encodeURIComponent("Market report "+it.id)+'">'+esc(t("report"))+'</a></p>'+
     (key?'<div class="mk-manage"><div class="mk-seller" style="margin:0;padding:0;border:0"><div class="lbl">'+esc(t("manage"))+'</div></div><p class="mk-note" style="margin-top:8px">'+esc(t("manageP"))+'</p><div class="mk-acts">'+
@@ -199,6 +254,8 @@ function renderForm(){
     '<div class="mk-f"><span class="l" style="display:block;font-size:16px;font-weight:500;margin-bottom:8px">'+esc(t("fPhotos"))+'</span><label class="mk-drop" style="position:relative">'+esc(t("fAdd"))+'<input type="file" id="f-ph" accept="image/*" multiple></label><span class="hint">'+esc(t("fPhotosH"))+'</span><div class="mk-prev" id="prev"></div></div>'+
     '<div class="mk-two"><div class="mk-f"><label class="l" for="f-name">'+esc(t("fName"))+'</label><input class="mk-in" id="f-name" maxlength="60" autocomplete="name"></div>'+
     '<div class="mk-f"><label class="l" for="f-phone">'+esc(t("fPhone"))+'</label><input class="mk-in" id="f-phone" type="tel" inputmode="tel" maxlength="20" autocomplete="tel" placeholder="+973"><span class="hint">'+esc(t("fPhoneH"))+'</span></div></div>'+
+    '<label class="mk-check" style="margin-top:16px"><input type="checkbox" id="f-shop">'+esc(t("fShop"))+'</label>'+
+    '<div class="mk-two" id="f-shopbox" hidden><div class="mk-f" style="margin-top:8px"><label class="l" for="f-shopname">'+esc(t("fShopName"))+'</label><input class="mk-in" id="f-shopname" maxlength="60"></div></div>'+
     '<div class="mk-two"><div class="mk-f"><label class="l" for="f-loc">'+esc(t("fLoc"))+'</label><input class="mk-in" id="f-loc" maxlength="60" value="Bahrain"></div></div>'+
     '<div class="mk-hp" aria-hidden="true"><input id="f-web" tabindex="-1" autocomplete="off"></div>'+
     '<label class="mk-consent"><input type="checkbox" id="f-ok"><span>'+esc(t("fConsent"))+'</span></label>'+
@@ -209,6 +266,7 @@ function renderForm(){
     var left = fs.length; if(!left) return;
     fs.forEach(function(file){ shrink(file, function(u){ if(u) photos.push(u); if(--left === 0){ drawPrev(); e.target.value = ""; } }); });
   });
+  var fs_ = document.getElementById("f-shop"); fs_.addEventListener("change", function(){ document.getElementById("f-shopbox").hidden = !fs_.checked; });
   document.getElementById("f").addEventListener("submit", submit);
 }
 function drawPrev(){
@@ -231,7 +289,7 @@ function submit(e){
   if(!LIVE){ err.textContent = t("errOff"); return; }
   var b = document.getElementById("go"); b.disabled = true; b.textContent = t("sending");
   var body = {title:v("f-title"), category:v("f-cat"), condition:v("f-cond"), price:v("f-price").replace(/[^\d.]/g,""), currency:v("f-cur"), size:v("f-size"),
-    description:v("f-desc"), seller:v("f-name"), phone:v("f-phone"), location:v("f-loc")};
+    description:v("f-desc"), seller:v("f-name"), phone:v("f-phone"), location:v("f-loc"), shop:document.getElementById("f-shop").checked, shop_name:document.getElementById("f-shop").checked ? v("f-shopname") : ""};
   if(v("f-web")) return;
   Promise.all(photos.map(upPhoto)).then(function(urls){ body.photos = urls; return rpc("post_listing", {p:body}); }).then(function(j){
     if(!j || !j.ok) throw new Error("post");
@@ -245,12 +303,195 @@ function submit(e){
   }).catch(function(){ err.textContent = t("errNet"); b.disabled = false; b.textContent = t("submit"); });
 }
 
+/* ---------- Wanted: requests from people looking for an item ---------- */
+function wOpen(w){ return w.status === "open" && new Date(w.expires).getTime() > Date.now(); }
+function shopTag(x){ return x && x.is_shop ? '<span class="mk-shop">'+esc(t("shop"))+'</span>' : ''; }
+function money(v, cur){ var n = Number(v).toLocaleString("en-US"); return L()==="ar" ? n+" "+(cur==="BHD"?"د.ب":cur) : (cur||"BHD")+" "+n; }
+function budget(w){ return (w.budget == null || w.budget === "") ? t("nobudget") : t("budget")+": "+money(w.budget, w.currency); }
+function arrow(){ return L()==="ar" ? "&rarr; " : "&larr; "; }
+function tabs(){
+  var nS = items ? items.filter(function(x){ return x.status !== "sold"; }).length : "";
+  var nW = wants ? wants.filter(wOpen).length : "";
+  var s = state.view === "wanted";
+  return '<nav class="mk-tabs" aria-label="Market"><a href="./" data-tab="sale"'+(s?'':' aria-current="page"')+'>'+esc(t("tabSale"))+'<span class="n">'+nS+'</span></a>'+
+    '<a href="?view=wanted" data-tab="wanted"'+(s?' aria-current="page"':'')+'>'+esc(t("tabWant"))+'<span class="n">'+nW+'</span></a></nav>';
+}
+function wcard(w){
+  var n = rcount[w.id] || 0, found = w.status === "found";
+  var meta = [lab(WCONDS, w.want_cond), w.size, w.location].filter(Boolean).join(L()==="ar" ? "، " : ", ");
+  return '<a class="mk-wcard'+(found?' found':'')+'" href="?want='+encodeURIComponent(w.id)+'" data-want="'+esc(w.id)+'">'+
+    '<span class="mk-wtop"><span class="mk-wcat">'+esc(lab(CATS, w.category))+'</span>'+(found?'<span class="mk-wst">'+esc(t("found"))+'</span>':'')+'</span>'+
+    '<span class="mk-ct" dir="auto">'+esc(w.title)+'</span><span class="mk-wb">'+esc(budget(w))+'</span>'+
+    (meta?'<span class="mk-meta" dir="auto">'+esc(meta)+'</span>':'')+
+    '<span class="mk-wfoot"><span dir="auto">'+esc(w.shop_name || w.name)+'</span>'+shopTag(w)+'<span class="mk-wn">'+esc(t("replies")(n))+'</span></span></a>';
+}
+function renderWanted(){
+  document.title = t("tabWant") + " | Market";
+  var counts = {all:0}; wants.forEach(function(w){ if(!wOpen(w)) return; counts.all++; counts[w.category] = (counts[w.category]||0)+1; });
+  var chips = '<button class="mk-chip" data-wcat="all" aria-pressed="'+(state.wcat==="all")+'">'+esc(t("all"))+'<span class="n">'+counts.all+'</span></button>';
+  CATS.forEach(function(c){ if(!counts[c[0]] && state.wcat !== c[0]) return; chips += '<button class="mk-chip" data-wcat="'+c[0]+'" aria-pressed="'+(state.wcat===c[0])+'">'+esc(lab(CATS,c[0]))+'<span class="n">'+(counts[c[0]]||0)+'</span></button>'; });
+  var q = state.wq.trim().toLowerCase();
+  var r = wants.filter(function(w){
+    if(!wOpen(w) && !(state.found && w.status === "found")) return false;
+    if(state.wcat !== "all" && w.category !== state.wcat) return false;
+    if(q){ var hay = (w.title+" "+w.description+" "+lab(CATS,w.category)+" "+w.size+" "+w.shop_name+" "+w.name).toLowerCase(); var ws = q.split(/\s+/); for(var i=0;i<ws.length;i++) if(hay.indexOf(ws[i]) < 0) return false; }
+    return true;
+  }).sort(function(a,b){ if((a.status==="found") !== (b.status==="found")) return a.status==="found" ? 1 : -1; return a.created < b.created ? 1 : -1; });
+  var h = tabs() + '<div class="mk-ctrl"><div class="mk-search"><input class="mk-in" id="wq" type="search" placeholder="'+esc(t("wSearch"))+'" aria-label="'+esc(t("wSearch"))+'" value="'+esc(state.wq)+'"></div>'+
+    '<div class="mk-chips" role="toolbar">'+chips+'</div>'+
+    '<div class="mk-row"><span class="mk-count">'+esc(t("wCount")(r.filter(wOpen).length))+'</span><span class="mk-opts"><label class="mk-check"><input type="checkbox" id="wfound"'+(state.found?" checked":"")+'>'+esc(t("showFound"))+'</label></span></div></div>';
+  h += r.length ? '<div class="mk-wgrid">'+r.map(wcard).join("")+'</div>' : '<p class="mk-empty">'+esc(t("wEmpty"))+'</p>';
+  h += '<div class="mk-acts" style="margin:0 0 8px"><a class="mk-btn" href="?ask=1" data-ask="1">'+esc(t("ask"))+'</a></div>';
+  h += '<p class="mk-note">'+esc(t("wSafety"))+'</p>';
+  view.innerHTML = h;
+  var qi = document.getElementById("wq");
+  qi.addEventListener("input", function(){ state.wq = qi.value; var pos = qi.selectionStart; renderWanted(); var n = document.getElementById("wq"); n.focus(); try{ n.setSelectionRange(pos,pos); }catch(e){} });
+  document.getElementById("wfound").addEventListener("change", function(e){ state.found = e.target.checked; renderWanted(); });
+  Array.prototype.forEach.call(view.querySelectorAll("[data-wcat]"), function(b){ b.addEventListener("click", function(){ state.wcat = b.getAttribute("data-wcat"); history.replaceState(null, "", "?view=wanted"+(state.wcat==="all"?"":"&cat="+state.wcat)); renderWanted(); }); });
+}
+
+function renderWant(id, key){
+  var w = null; for(var i=0;i<wants.length;i++) if(wants[i].id === id) w = wants[i];
+  var back = '<a class="mk-back" href="?view=wanted" data-tab="wanted">'+arrow()+esc(t("backW"))+'</a>';
+  if(!w){ view.innerHTML = back + '<p class="mk-empty">'+esc(t("wNotfound"))+'</p>'; document.title = "Market"; return; }
+  document.title = t("tabWant") + ": " + w.title + " | Market";
+  var open = wOpen(w), found = w.status === "found", d = digits(w.phone);
+  var wa = d ? "https://wa.me/"+d+"?text="+encodeURIComponent(t("waAsk")(w.title)) : "";
+  var stateLine = found ? '<span class="mk-soldline ok">'+esc(t("found"))+'</span>' : (!open ? '<span class="mk-soldline">'+esc(t("expired"))+'</span>' : '');
+  var btns = function(attr){ return (found || !open ? '<button class="mk-btn" type="button" '+attr+'="open">'+esc(t("renew"))+'</button>' : '<button class="mk-btn" type="button" '+attr+'="found">'+esc(t("markFound"))+'</button><button class="mk-btn ghost" type="button" '+attr+'="open">'+esc(t("renew"))+'</button>')+
+    '<button class="mk-btn ghost" type="button" '+attr+'="removed">'+esc(t("removeR"))+'</button>'; };
+  var left = '<span class="mk-wcat">'+esc(lab(CATS, w.category))+'</span><h1 dir="auto" style="margin-top:8px">'+esc(w.title)+'</h1>'+stateLine+
+    '<div class="mk-bigprice">'+esc(budget(w))+'</div>'+
+    '<div class="mk-facts"><span class="mk-fact">'+esc(lab(WCONDS, w.want_cond))+'</span>'+(w.size?'<span class="mk-fact" dir="auto">'+esc(w.size)+'</span>':'')+(w.location?'<span class="mk-fact" dir="auto">'+esc(w.location)+'</span>':'')+
+    '<span class="mk-fact">'+esc(t("posted"))+' '+esc(date(w.created))+'</span>'+(open?'<span class="mk-fact">'+esc(t("until"))+' '+esc(date(w.expires))+'</span>':'')+'</div>'+
+    (w.description?'<div class="mk-desc" dir="auto">'+esc(w.description)+'</div>':'')+
+    '<div class="mk-seller"><div class="lbl">'+esc(t("buyer"))+'</div><div class="nm" dir="auto">'+esc(w.shop_name || w.name)+shopTag(w)+'</div>'+(w.shop_name && w.name?'<div class="sub" dir="auto">'+esc(w.name)+'</div>':'')+
+    (d?'<div class="ph">'+esc(pretty(w.phone))+'</div>':'')+'<div class="mk-acts">'+(d && !found?'<a class="mk-btn" target="_blank" rel="noopener" href="'+esc(wa)+'">'+esc(t("waBuyer"))+'</a>':'')+'<button class="mk-btn ghost" type="button" id="copy">'+esc(t("copy"))+'</button></div></div>'+
+    '<p class="mk-note">'+esc(t("wSafety"))+' <a href="mailto:contact@saqeralkhalifa.com?subject='+encodeURIComponent("Market request report "+w.id)+'">'+esc(t("report"))+'</a></p>'+
+    (key?'<div class="mk-manage"><div class="mk-seller" style="margin:0;padding:0;border:0"><div class="lbl">'+esc(t("wManage"))+'</div></div><p class="mk-note" style="margin-top:8px">'+esc(t("wManageP"))+'</p><div class="mk-acts">'+btns("data-wst")+'</div><p class="mk-note" id="mst"></p></div>':'')+
+    (!key && d ? '<details class="mk-own"><summary>'+esc(found||!open?t("wOwnQ2"):t("wOwnQ"))+'</summary><p class="mk-note">'+esc(t("wOwnP"))+'</p>'+
+      '<input class="mk-in" id="ownph" type="tel" inputmode="tel" autocomplete="tel" placeholder="'+esc(t("ownPh"))+'" aria-label="'+esc(t("ownPh"))+'">'+
+      '<div class="mk-acts">'+btns("data-wown")+'</div><p class="mk-note" id="ownst" role="status"></p></details>' : '');
+  var right = '<h2 class="mk-h2" id="rh">'+esc(t("replies")(rcount[w.id]||0))+'</h2><div id="rlist"><p class="mk-note">'+esc(t("loading"))+'</p></div>'+
+    (open ? '<form class="mk-have" id="hf" novalidate><h2 class="mk-h2">'+esc(t("haveH"))+'</h2><p class="mk-note" style="margin-top:8px">'+esc(t("haveP"))+'</p>'+
+      '<div class="mk-f"><label class="l" for="r-name">'+esc(t("rName"))+'</label><input class="mk-in" id="r-name" maxlength="60" autocomplete="name"></div>'+
+      '<div class="mk-f"><label class="l" for="r-phone">'+esc(t("rPhone"))+'</label><input class="mk-in" id="r-phone" type="tel" inputmode="tel" maxlength="20" autocomplete="tel" placeholder="+973"></div>'+
+      '<label class="mk-check" style="margin-top:12px"><input type="checkbox" id="r-shop">'+esc(t("rShop"))+'</label>'+
+      '<div class="mk-f" id="r-shopbox" hidden style="margin-top:8px"><label class="l" for="r-shopname">'+esc(t("rShopName"))+'</label><input class="mk-in" id="r-shopname" maxlength="60"></div>'+
+      '<div class="mk-f"><label class="l" for="r-price">'+esc(t("rPrice"))+'</label><div class="mk-pr"><select class="mk-sel" id="r-cur" aria-label="Currency"><option>BHD</option><option>SAR</option><option>AED</option><option>USD</option></select><input class="mk-in" id="r-price" inputmode="decimal" maxlength="9"></div></div>'+
+      '<div class="mk-f"><label class="l" for="r-note">'+esc(t("rNote"))+'</label><textarea class="mk-ta" id="r-note" maxlength="500" style="min-height:96px"></textarea><span class="hint">'+esc(t("rNoteH"))+'</span></div>'+
+      '<div class="mk-hp" aria-hidden="true"><input id="r-web" tabindex="-1" autocomplete="off"></div>'+
+      '<p class="mk-err" id="rerr" role="alert"></p><div class="mk-acts"><button class="mk-btn" type="submit" id="rgo">'+esc(t("rSend"))+'</button></div><div id="rok"></div></form>' : '');
+  view.innerHTML = back + '<div class="mk-item"><div>'+left+'</div><div>'+right+'</div></div>';
+  loadReplies(w);
+  var c = document.getElementById("copy"); if(c) c.addEventListener("click", function(){ var u = location.origin + location.pathname + "?want=" + encodeURIComponent(w.id); (navigator.clipboard ? navigator.clipboard.writeText(u) : Promise.reject()).then(function(){ c.textContent = t("copied"); }, function(){ prompt("", u); }); });
+  var sb = document.getElementById("r-shop"); if(sb) sb.addEventListener("change", function(){ document.getElementById("r-shopbox").hidden = !sb.checked; });
+  var hf = document.getElementById("hf"); if(hf) hf.addEventListener("submit", function(e){ sendReply(e, w, d); });
+  var after = function(st){ if(st === "removed"){ wants = wants.filter(function(x){ return x.id !== w.id; }); setTimeout(function(){ go("?view=wanted"); }, 700); }
+    else { w.status = st; if(st === "open") w.expires = new Date(Date.now() + 30*864e5).toISOString(); setTimeout(function(){ route(); }, 700); } };
+  Array.prototype.forEach.call(view.querySelectorAll("[data-wst]"), function(b){ b.addEventListener("click", function(){
+    var st = b.getAttribute("data-wst"), out = document.getElementById("mst"); b.disabled = true;
+    rpc("set_wanted_status", {p_id:w.id, p_token:key, p_status:st}).then(function(j){ out.textContent = j.ok ? t("done") : t("errNet"); if(j.ok) after(st); else b.disabled = false; })
+      .catch(function(){ out.textContent = t("errNet"); b.disabled = false; });
+  }); });
+  Array.prototype.forEach.call(view.querySelectorAll("[data-wown]"), function(b){ b.addEventListener("click", function(){
+    var st = b.getAttribute("data-wown"), out = document.getElementById("ownst"), ph = document.getElementById("ownph").value;
+    if(String(ph).replace(/\D/g,"").length < 8){ out.textContent = t("errPhone"); return; }
+    b.disabled = true;
+    rpc("mark_wanted", {p_id:w.id, p_phone:ph, p_status:st}).then(function(j){ b.disabled = false;
+      if(!j || !j.ok){ out.textContent = j && j.error === "phone" ? t("ownWrong") : t("errNet"); return; }
+      out.textContent = t("done"); after(st);
+    }).catch(function(){ b.disabled = false; out.textContent = t("errNet"); });
+  }); });
+}
+function loadReplies(w){
+  fetch(SB.url+"/rest/v1/wanted_replies?select=id,created,name,phone,is_shop,shop_name,note,price,currency&wanted_id=eq."+encodeURIComponent(w.id)+"&order=created.desc", {headers:sbh({})})
+    .then(function(r){ return r.ok ? r.json() : []; }).catch(function(){ return []; }).then(function(rs){
+      var box = document.getElementById("rlist"); if(!box) return;
+      rcount[w.id] = rs.length; var rh = document.getElementById("rh"); if(rh) rh.textContent = t("replies")(rs.length);
+      if(!rs.length){ box.innerHTML = '<p class="mk-note" style="margin-top:12px">'+esc(t("rNone"))+'</p>'; return; }
+      box.innerHTML = rs.map(function(r){ var rd = digits(r.phone);
+        return '<div class="mk-reply"><div class="nm" dir="auto">'+esc(r.shop_name || r.name)+shopTag(r)+'</div>'+(r.shop_name && r.name?'<div class="sub" dir="auto">'+esc(r.name)+'</div>':'')+
+          (r.price != null && r.price !== ""?'<div class="pr">'+esc(money(r.price, r.currency))+'</div>':'')+(r.note?'<p dir="auto">'+esc(r.note)+'</p>':'')+
+          (rd?'<div class="ph">'+esc(pretty(r.phone))+'</div><div class="mk-acts" style="margin-top:8px"><a class="mk-btn ghost" target="_blank" rel="noopener" href="https://wa.me/'+rd+'?text='+encodeURIComponent(t("waReply")(w.title))+'">'+esc(t("wa"))+'</a></div>':'')+
+          '<div class="dt">'+esc(date(r.created))+'</div></div>'; }).join("");
+    });
+}
+function sendReply(e, w, d){
+  e.preventDefault();
+  var v = function(id){ return document.getElementById(id).value.trim(); };
+  var err = document.getElementById("rerr"); err.textContent = "";
+  if(v("r-phone").replace(/\D/g,"").length < 8){ err.textContent = t("errPhone"); return; }
+  if(v("r-web")) return;
+  var shop = document.getElementById("r-shop").checked, pr = v("r-price").replace(/[^\d.]/g,""), cur = v("r-cur"), note = v("r-note");
+  var msg = t("waAsk")(w.title) + (pr ? " " + t("waPrice") + " " + money(pr, cur) + "." : "") + (note ? " " + note : "");
+  var url = d ? "https://wa.me/"+d+"?text="+encodeURIComponent(msg) : "";
+  if(url){ try{ window.open(url, "_blank"); }catch(x){} }
+  var b = document.getElementById("rgo"); b.disabled = true; b.textContent = t("sending");
+  rpc("post_reply", {p:{wanted_id:w.id, name:v("r-name"), phone:v("r-phone"), shop:shop, shop_name:shop ? v("r-shopname") : "", price:pr, currency:cur, note:note}}).then(function(j){
+    if(!j || !j.ok){ err.textContent = j && j.error === "gone" ? t("rErrGone") : j && j.error === "full" ? t("rErrFull") : t("errNet"); b.disabled = false; b.textContent = t("rSend"); return; }
+    b.hidden = true;
+    document.getElementById("rok").innerHTML = '<div class="mk-ok">'+esc(t("rDone"))+(url?'<div class="mk-acts"><a class="mk-btn" target="_blank" rel="noopener" href="'+esc(url)+'">'+esc(t("rOpen"))+'</a></div>':'')+'</div>';
+    loadReplies(w);
+  }).catch(function(){ err.textContent = t("errNet"); b.disabled = false; b.textContent = t("rSend"); });
+}
+
+function renderAsk(){
+  document.title = t("askH") + " | Market";
+  var opt = function(list, sel){ return list.map(function(c){ return '<option value="'+c[0]+'"'+(c[0]===sel?' selected':'')+'>'+esc(lab(list,c[0]))+'</option>'; }).join(""); };
+  var back = '<a class="mk-back" href="?view=wanted" data-tab="wanted">'+arrow()+esc(t("backW"))+'</a>';
+  view.innerHTML = back + '<form class="mk-form" id="af" novalidate><h2>'+esc(t("askH"))+'</h2><p class="lead">'+esc(t("askP"))+'</p>'+
+    '<div class="mk-f"><label class="l" for="a-title">'+esc(t("aTitle"))+'</label><input class="mk-in" id="a-title" maxlength="120" required><span class="hint">'+esc(t("aTitleH"))+'</span></div>'+
+    '<div class="mk-two"><div class="mk-f"><label class="l" for="a-cat">'+esc(t("fCat"))+'</label><select class="mk-sel" id="a-cat">'+opt(CATS, state.wcat)+'</select></div>'+
+    '<div class="mk-f"><label class="l" for="a-cond">'+esc(t("aCond"))+'</label><select class="mk-sel" id="a-cond">'+opt(WCONDS, "any")+'</select></div></div>'+
+    '<div class="mk-two"><div class="mk-f"><label class="l" for="a-budget">'+esc(t("aBudget"))+'</label><div class="mk-pr"><select class="mk-sel" id="a-cur" aria-label="Currency"><option>BHD</option><option>SAR</option><option>AED</option><option>USD</option></select><input class="mk-in" id="a-budget" inputmode="decimal" maxlength="9"></div><span class="hint">'+esc(t("aBudgetH"))+'</span></div>'+
+    '<div class="mk-f"><label class="l" for="a-size">'+esc(t("fSize"))+'</label><input class="mk-in" id="a-size" maxlength="40"><span class="hint">'+esc(t("fSizeH"))+'</span></div></div>'+
+    '<div class="mk-f"><label class="l" for="a-desc">'+esc(t("aDesc"))+'</label><textarea class="mk-ta" id="a-desc" maxlength="1500"></textarea><span class="hint">'+esc(t("aDescH"))+'</span></div>'+
+    '<div class="mk-two"><div class="mk-f"><label class="l" for="a-name">'+esc(t("fName"))+'</label><input class="mk-in" id="a-name" maxlength="60" autocomplete="name"></div>'+
+    '<div class="mk-f"><label class="l" for="a-phone">'+esc(t("fPhone"))+'</label><input class="mk-in" id="a-phone" type="tel" inputmode="tel" maxlength="20" autocomplete="tel" placeholder="+973"><span class="hint">'+esc(t("aPhoneH"))+'</span></div></div>'+
+    '<label class="mk-check" style="margin-top:16px"><input type="checkbox" id="a-shop">'+esc(t("fShop"))+'</label>'+
+    '<div class="mk-two" id="a-shopbox" hidden><div class="mk-f" style="margin-top:8px"><label class="l" for="a-shopname">'+esc(t("fShopName"))+'</label><input class="mk-in" id="a-shopname" maxlength="60"></div></div>'+
+    '<div class="mk-two"><div class="mk-f"><label class="l" for="a-loc">'+esc(t("fLoc"))+'</label><input class="mk-in" id="a-loc" maxlength="60" value="Bahrain"></div></div>'+
+    '<div class="mk-hp" aria-hidden="true"><input id="a-web" tabindex="-1" autocomplete="off"></div>'+
+    '<label class="mk-consent"><input type="checkbox" id="a-ok"><span>'+esc(t("aConsent"))+'</span></label>'+
+    '<p class="mk-err" id="err" role="alert"></p><div class="mk-acts"><button class="mk-btn" type="submit" id="go">'+esc(t("aSubmit"))+'</button></div><div id="okbox"></div></form>';
+  var sb = document.getElementById("a-shop"); sb.addEventListener("change", function(){ document.getElementById("a-shopbox").hidden = !sb.checked; });
+  document.getElementById("af").addEventListener("submit", function(e){
+    e.preventDefault();
+    var v = function(id){ return document.getElementById(id).value.trim(); };
+    var err = document.getElementById("err"); err.textContent = "";
+    if(v("a-title").length < 3){ err.textContent = t("aErrTitle"); return; }
+    if(v("a-phone").replace(/\D/g,"").length < 8){ err.textContent = t("errPhone"); return; }
+    if(!document.getElementById("a-ok").checked){ err.textContent = t("errConsent"); return; }
+    if(v("a-web")) return;
+    var b = document.getElementById("go"); b.disabled = true; b.textContent = t("sending");
+    var shop = sb.checked;
+    rpc("post_wanted", {p:{title:v("a-title"), category:v("a-cat"), want_cond:v("a-cond"), budget:v("a-budget").replace(/[^\d.]/g,""), currency:v("a-cur"), size:v("a-size"),
+      description:v("a-desc"), name:v("a-name"), phone:v("a-phone"), location:v("a-loc"), shop:shop, shop_name:shop ? v("a-shopname") : ""}}).then(function(j){
+      if(!j || !j.ok) throw new Error("post");
+      var base = location.origin + location.pathname, vu = base + "?want=" + j.id, man = vu + "&key=" + j.token;
+      wants = null; items = null; b.hidden = true;
+      var box = document.getElementById("okbox");
+      box.innerHTML = '<div class="mk-ok"><strong>'+esc(t("aOk"))+'</strong><div class="mk-acts"><a class="mk-btn" href="'+esc(vu)+'">'+esc(t("aView"))+'</a></div><p style="margin-top:16px">'+esc(t("aKeep"))+'</p><input class="mk-in" readonly value="'+esc(man)+'" onclick="this.select()"></div>';
+      box.scrollIntoView();
+    }).catch(function(){ err.textContent = t("errNet"); b.disabled = false; b.textContent = t("aSubmit"); });
+  });
+}
+
+function heroTexts(){
+  var w = state.view === "wanted", l = L();
+  document.getElementById("t-sub").textContent = w ? T[l].wSub : T[l].sub;
+  var a = document.getElementById("t-post"), b = document.getElementById("t-ask");
+  if(a && b){ a.className = w ? "mk-btn ghost" : "mk-btn"; b.className = w ? "mk-btn" : "mk-btn ghost"; var c = a.parentNode; if(w) c.insertBefore(b, a); else c.insertBefore(a, b); }
+}
 function texts(){
   var l = L();
   document.getElementById("t-kicker").textContent = T[l].kicker;
   document.getElementById("t-h").textContent = T[l].h;
   document.getElementById("t-sub").textContent = T[l].sub;
   document.getElementById("t-post").textContent = T[l].post;
+  var ta = document.getElementById("t-ask"); if(ta) ta.textContent = T[l].ask;
+  heroTexts();
   document.getElementById("t-foot").innerHTML = T[l].foot;
 }
 function setLang(l){
@@ -264,6 +505,9 @@ document.addEventListener("click", function(e){
   if(a.hasAttribute("data-item")){ e.preventDefault(); go("?item=" + encodeURIComponent(a.getAttribute("data-item"))); }
   else if(a.hasAttribute("data-home")){ e.preventDefault(); go(location.pathname + (state.cat !== "all" ? "?cat="+state.cat : "")); }
   else if(a.id === "t-post"){ e.preventDefault(); go("?post=1"); }
+  else if(a.id === "t-ask" || a.hasAttribute("data-ask")){ e.preventDefault(); go("?ask=1"); }
+  else if(a.hasAttribute("data-want")){ e.preventDefault(); go("?want=" + encodeURIComponent(a.getAttribute("data-want"))); }
+  else if(a.hasAttribute("data-tab")){ e.preventDefault(); go(a.getAttribute("data-tab") === "wanted" ? "?view=wanted" + (state.wcat !== "all" ? "&cat="+state.wcat : "") : location.pathname + (state.cat !== "all" ? "?cat="+state.cat : "")); }
 });
 window.addEventListener("popstate", route);
 var l0 = "en"; try{ l0 = mcInitLang(); }catch(e){}
