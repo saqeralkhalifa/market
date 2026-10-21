@@ -76,7 +76,7 @@ var W = {
   aSubmit:"Post my request", aErrTitle:"Please write what you are looking for.", aOk:"Your request is live.", aView:"View your request", aKeep:"Save this private link. You will need it to mark the request as found or to remove it:",
   wOwnQ:"Is this your request? Mark it as found", wOwnQ2:"Is this your request? Open it again", wOwnP:"Enter the WhatsApp number shown on this request to confirm it is yours.",
   markFound:"Mark as found", renew:"Still looking, renew for 30 days", removeR:"Remove request", wManage:"Manage your request", wManageP:"This private link lets you change your request. Keep it to yourself.",
-  wNotfound:"This request was not found. It may have been removed.", until:"Open until",
+  wNotfound:"This request was not found. It may have been removed.", reportW:"Report this request", until:"Open until",
   wSafety:"Requests are posted by the people looking for the items and are not checked by anyone. See the item in person before you pay, and meet in a public place."},
  ar:{tabSale:"للبيع", tabWant:"مطلوب", ask:"اطلب منتجا", backW:"العودة إلى المطلوب",
   wSub:"تبحث عن شيء لا تجده معروضا للبيع؟ انشر ما تحتاجه، وسيتواصل معك على واتساب أصحاب المحلات والأعضاء الذين يملكونه. يبقى الطلب منشورا 30 يوما.",
@@ -97,7 +97,7 @@ var W = {
   aSubmit:"انشر الطلب", aErrTitle:"اكتب ما الذي تبحث عنه.", aOk:"طلبك منشور الآن.", aView:"عرض طلبك", aKeep:"احفظ هذا الرابط الخاص، ستحتاجه لتغيير الحالة إلى تم إيجاده أو لحذف الطلب:",
   wOwnQ:"هل هذا طلبك؟ اجعله تم إيجاده", wOwnQ2:"هل هذا طلبك؟ افتحه من جديد", wOwnP:"أدخل رقم الواتساب الظاهر في هذا الطلب لتأكيد أنه لك.",
   markFound:"تم إيجاده", renew:"ما زلت أبحث، جدده 30 يوما", removeR:"حذف الطلب", wManage:"إدارة طلبك", wManageP:"هذا الرابط الخاص يتيح لك تغيير طلبك. احتفظ به لنفسك.",
-  wNotfound:"لم يتم العثور على هذا الطلب. ربما تم حذفه.", until:"مفتوح حتى",
+  wNotfound:"لم يتم العثور على هذا الطلب. ربما تم حذفه.", reportW:"الإبلاغ عن هذا الطلب", until:"مفتوح حتى",
   wSafety:"ينشر أصحاب الطلبات طلباتهم بأنفسهم ولا يراجعها أحد. عاين المنتج بنفسك قبل الدفع، واختر مكانا عاما للقاء."}
 };
 for(var wl in W){ for(var wk in W[wl]) T[wl][wk] = W[wl][wk]; }
@@ -367,7 +367,7 @@ function renderWant(id, key){
     (w.description?'<div class="mk-desc" dir="auto">'+esc(w.description)+'</div>':'')+
     '<div class="mk-seller"><div class="lbl">'+esc(t("buyer"))+'</div><div class="nm" dir="auto">'+esc(w.shop_name || w.name)+shopTag(w)+'</div>'+(w.shop_name && w.name?'<div class="sub" dir="auto">'+esc(w.name)+'</div>':'')+
     (d?'<div class="ph">'+esc(pretty(w.phone))+'</div>':'')+'<div class="mk-acts">'+(d && !found?'<a class="mk-btn" target="_blank" rel="noopener" href="'+esc(wa)+'">'+esc(t("waBuyer"))+'</a>':'')+'<button class="mk-btn ghost" type="button" id="copy">'+esc(t("copy"))+'</button></div></div>'+
-    '<p class="mk-note">'+esc(t("wSafety"))+' <a href="mailto:contact@saqeralkhalifa.com?subject='+encodeURIComponent("Market request report "+w.id)+'">'+esc(t("report"))+'</a></p>'+
+    '<p class="mk-note">'+esc(t("wSafety"))+' <a href="mailto:contact@saqeralkhalifa.com?subject='+encodeURIComponent("Market request report "+w.id)+'">'+esc(t("reportW"))+'</a></p>'+
     (key?'<div class="mk-manage"><div class="mk-seller" style="margin:0;padding:0;border:0"><div class="lbl">'+esc(t("wManage"))+'</div></div><p class="mk-note" style="margin-top:8px">'+esc(t("wManageP"))+'</p><div class="mk-acts">'+btns("data-wst")+'</div><p class="mk-note" id="mst"></p></div>':'')+
     (!key && d ? '<details class="mk-own"><summary>'+esc(found||!open?t("wOwnQ2"):t("wOwnQ"))+'</summary><p class="mk-note">'+esc(t("wOwnP"))+'</p>'+
       '<input class="mk-in" id="ownph" type="tel" inputmode="tel" autocomplete="tel" placeholder="'+esc(t("ownPh"))+'" aria-label="'+esc(t("ownPh"))+'">'+
