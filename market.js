@@ -107,6 +107,7 @@ var MON = {en:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov"
 var loading = false, items = null, wants = null, rcount = {}, state = {cat:"all", q:"", sold:true, sort:"new", view:"sale", wcat:"all", wq:"", found:false}, view = document.getElementById("view");
 function L(){ return document.documentElement.lang === "ar" ? "ar" : "en"; }
 function t(k){ return T[L()][k]; }
+function clean(s){ return String(s == null ? "" : s).replace(/(\d)\s*[\u2013\u2014]\s*(\d)/g, "$1 to $2").replace(/\s*[\u2013\u2014]\s*/g, ", ").replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{200D}\u{20E3}]/gu, "").replace(/\s{2,}/g, " ").replace(/^[\s,]+|[\s,]+$/g, ""); }
 function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
 function lab(list, k){ for(var i=0;i<list.length;i++) if(list[i][0]===k) return L()==="ar" ? list[i][2] : list[i][1]; return k; }
 function price(it){ if(it.price == null || it.price === "" || isNaN(it.price)) return t("onreq"); var n = Number(it.price).toLocaleString("en-US"); return L()==="ar" ? n+" "+(it.currency==="BHD"?"د.ب":it.currency) : (it.currency||"BHD")+" "+n; }
@@ -182,10 +183,10 @@ function renderList(){
 }
 
 function card(it){
-  var ph = it.photos && it.photos.length ? '<img loading="lazy" src="'+esc(img(it.photos[0]))+'" alt="'+esc(it.title)+'">' : '<span class="none">'+esc(lab(CATS,it.category))+'</span>';
+  var ph = it.photos && it.photos.length ? '<img loading="lazy" src="'+esc(img(it.photos[0]))+'" alt="'+esc(clean(it.title))+'">' : '<span class="none">'+esc(lab(CATS,it.category))+'</span>';
   var sold = it.status === "sold";
   return '<a class="mk-card'+(sold?" sold":"")+'" href="?item='+encodeURIComponent(it.id)+'" data-item="'+esc(it.id)+'"><span class="mk-ph">'+ph+(sold?'<span class="mk-badge">'+esc(t("sold"))+'</span>':'')+(it.sample?'<span class="mk-badge smp">'+esc(t("smpBadge"))+'</span>':'')+(it.is_shop?'<span class="mk-badge shop">'+esc(t("shop"))+'</span>':'')+'</span>'+
-    '<span class="mk-cb"><span class="mk-price">'+esc(price(it))+'</span><span class="mk-ct" dir="auto">'+esc(it.title)+'</span><span class="mk-meta">'+esc(lab(CONDS,it.condition))+(it.location?', '+esc(it.location):'')+'</span></span></a>';
+    '<span class="mk-cb"><span class="mk-price">'+esc(price(it))+'</span><span class="mk-ct" dir="auto">'+esc(clean(it.title))+'</span><span class="mk-meta">'+esc(lab(CONDS,it.condition))+(it.location?', '+esc(it.location):'')+'</span></span></a>';
 }
 
 function renderItem(id, key){
@@ -193,7 +194,7 @@ function renderItem(id, key){
   var back = '<a class="mk-back" href="./" data-home="1">'+(L()==="ar"?"&rarr; ":"&larr; ")+esc(t("back"))+'</a>';
   if(!it){ view.innerHTML = back + '<p class="mk-empty">'+esc(t("notfound"))+'</p>'; document.title = "Market"; return; }
   document.title = it.title + " | Market";
-  var gal = it.photos && it.photos.length ? '<div class="mk-gal" id="gal">'+it.photos.map(function(p){ return '<img src="'+esc(img(p))+'" alt="'+esc(it.title)+'">'; }).join("")+'</div>'+
+  var gal = it.photos && it.photos.length ? '<div class="mk-gal" id="gal">'+it.photos.map(function(p){ return '<img src="'+esc(img(p))+'" alt="'+esc(clean(it.title))+'">'; }).join("")+'</div>'+
     (it.photos.length>1 ? '<div class="mk-thumbs">'+it.photos.map(function(p,i){ return '<button type="button" data-i="'+i+'" aria-label="Photo '+(i+1)+'"><img src="'+esc(img(p))+'" alt=""></button>'; }).join("")+'</div>' : '') :
     '<div class="mk-nophoto">'+esc(t("nophoto"))+'</div>';
   if(it.sample) gal += '<p class="mk-smp">'+esc(t("smpNote"))+' '+esc(t("smpBy"))+': <a href="'+esc(it.sample.url)+'" target="_blank" rel="noopener">'+esc(it.sample.by)+'</a>, '+esc(it.sample.lic)+', Wikimedia Commons.</p>';
@@ -202,9 +203,9 @@ function renderItem(id, key){
   var contact = d ? '<div class="mk-acts">'+(sold?'':'<a class="mk-btn" target="_blank" rel="noopener" href="https://wa.me/'+d+'?text='+encodeURIComponent(t("waMsg")(it.title))+'">'+esc(t("wa"))+'</a><a class="mk-btn ghost" href="tel:+'+d+'">'+esc(t("call"))+'</a>')+'<button class="mk-btn ghost" type="button" id="copy">'+esc(t("copy"))+'</button></div>'
     : '<p class="mk-note">'+esc(t("nophone"))+'</p><div class="mk-acts"><button class="mk-btn ghost" type="button" id="copy">'+esc(t("copy"))+'</button></div>';
   var h = back + '<div class="mk-item"><div>'+gal+'</div><div>'+
-    '<h1 dir="auto">'+esc(it.title)+'</h1>'+(sold?'<span class="mk-soldline">'+esc(t("sold"))+'</span>':'')+'<div class="mk-bigprice">'+esc(price(it))+'</div>'+
+    '<h1 dir="auto">'+esc(clean(it.title))+'</h1>'+(sold?'<span class="mk-soldline">'+esc(t("sold"))+'</span>':'')+'<div class="mk-bigprice">'+esc(price(it))+'</div>'+
     '<div class="mk-facts"><span class="mk-fact">'+esc(lab(CATS,it.category))+'</span><span class="mk-fact">'+esc(lab(CONDS,it.condition))+'</span>'+(it.size?'<span class="mk-fact">'+esc(it.size)+'</span>':'')+(it.location?'<span class="mk-fact">'+esc(it.location)+'</span>':'')+'<span class="mk-fact">'+esc(t("posted"))+' '+esc(date(it.created))+'</span></div>'+
-    (it.description?'<div class="mk-desc" dir="auto">'+esc(it.description)+'</div>':'')+
+    (it.description?'<div class="mk-desc" dir="auto">'+esc(clean(it.description))+'</div>':'')+
     '<div class="mk-seller"><div class="lbl">'+esc(t("seller"))+'</div>'+(it.seller||it.shop_name?'<div class="nm" dir="auto">'+esc(it.shop_name||it.seller)+shopTag(it)+'</div>'+(it.shop_name&&it.seller?'<div class="sub" dir="auto">'+esc(it.seller)+'</div>':''):'')+(d?'<div class="ph">'+esc(pretty(it.phone))+'</div>':'')+contact+'</div>'+
     (it.source==="whatsapp"?'<p class="mk-note">'+esc(t("fromWa"))+'</p>':'')+(it.source==="instagram"?'<p class="mk-note">'+esc(t("fromIg"))+'</p>':'')+
     '<p class="mk-note">'+esc(t("safety"))+' <a href="mailto:contact@saqeralkhalifa.com?subject='+encodeURIComponent("Market report "+it.id)+'">'+esc(t("report"))+'</a></p>'+
@@ -288,8 +289,8 @@ function submit(e){
   if(!document.getElementById("f-ok").checked){ err.textContent = t("errConsent"); return; }
   if(!LIVE){ err.textContent = t("errOff"); return; }
   var b = document.getElementById("go"); b.disabled = true; b.textContent = t("sending");
-  var body = {title:v("f-title"), category:v("f-cat"), condition:v("f-cond"), price:v("f-price").replace(/[^\d.]/g,""), currency:v("f-cur"), size:v("f-size"),
-    description:v("f-desc"), seller:v("f-name"), phone:v("f-phone"), location:v("f-loc"), shop:document.getElementById("f-shop").checked, shop_name:document.getElementById("f-shop").checked ? v("f-shopname") : ""};
+  var body = {title:clean(v("f-title")), category:v("f-cat"), condition:v("f-cond"), price:v("f-price").replace(/[^\d.]/g,""), currency:v("f-cur"), size:v("f-size"),
+    description:clean(v("f-desc")), seller:v("f-name"), phone:v("f-phone"), location:v("f-loc"), shop:document.getElementById("f-shop").checked, shop_name:document.getElementById("f-shop").checked ? v("f-shopname") : ""};
   if(v("f-web")) return;
   Promise.all(photos.map(upPhoto)).then(function(urls){ body.photos = urls; return rpc("post_listing", {p:body}); }).then(function(j){
     if(!j || !j.ok) throw new Error("post");
@@ -320,9 +321,9 @@ function wcard(w){
   var n = rcount[w.id] || 0, found = w.status === "found";
   var meta = [lab(WCONDS, w.want_cond), w.size, w.location].filter(Boolean).join(L()==="ar" ? "، " : ", ");
   return '<a class="mk-wcard'+(found?' found':'')+'" href="?want='+encodeURIComponent(w.id)+'" data-want="'+esc(w.id)+'">'+
-    (w.photo?'<span class="mk-ph mk-wph"><img loading="lazy" src="'+esc(w.photo)+'" alt="'+esc(w.title)+'">'+(w.sample?'<span class="mk-badge smp">'+esc(t("smpBadge"))+'</span>':'')+'</span>':'')+
+    (w.photo?'<span class="mk-ph mk-wph"><img loading="lazy" src="'+esc(w.photo)+'" alt="'+esc(clean(w.title))+'">'+(w.sample?'<span class="mk-badge smp">'+esc(t("smpBadge"))+'</span>':'')+'</span>':'')+
     '<span class="mk-wtop"><span class="mk-wcat">'+esc(lab(CATS, w.category))+'</span>'+(found?'<span class="mk-wst">'+esc(t("found"))+'</span>':'')+'</span>'+
-    '<span class="mk-ct" dir="auto">'+esc(w.title)+'</span><span class="mk-wb">'+esc(budget(w))+'</span>'+
+    '<span class="mk-ct" dir="auto">'+esc(clean(w.title))+'</span><span class="mk-wb">'+esc(budget(w))+'</span>'+
     (meta?'<span class="mk-meta" dir="auto">'+esc(meta)+'</span>':'')+
     '<span class="mk-wfoot"><span dir="auto">'+esc(w.shop_name || w.name)+'</span>'+shopTag(w)+'<span class="mk-wn">'+esc(t("replies")(n))+'</span></span></a>';
 }
@@ -361,13 +362,13 @@ function renderWant(id, key){
   var stateLine = found ? '<span class="mk-soldline ok">'+esc(t("found"))+'</span>' : (!open ? '<span class="mk-soldline">'+esc(t("expired"))+'</span>' : '');
   var btns = function(attr){ return (found || !open ? '<button class="mk-btn" type="button" '+attr+'="open">'+esc(t("renew"))+'</button>' : '<button class="mk-btn" type="button" '+attr+'="found">'+esc(t("markFound"))+'</button><button class="mk-btn ghost" type="button" '+attr+'="open">'+esc(t("renew"))+'</button>')+
     '<button class="mk-btn ghost" type="button" '+attr+'="removed">'+esc(t("removeR"))+'</button>'; };
-  var pic = w.photo ? '<div class="mk-wpic"><img src="'+esc(w.photo)+'" alt="'+esc(w.title)+'">'+(w.sample?'<span class="mk-badge smp">'+esc(t("smpBadge"))+'</span>':'')+'</div>'+
+  var pic = w.photo ? '<div class="mk-wpic"><img src="'+esc(w.photo)+'" alt="'+esc(clean(w.title))+'">'+(w.sample?'<span class="mk-badge smp">'+esc(t("smpBadge"))+'</span>':'')+'</div>'+
     (w.sample?'<p class="mk-smp">'+esc(t("wSmpNote"))+' '+esc(t("smpBy"))+': <a href="'+esc(w.sample.url)+'" target="_blank" rel="noopener">'+esc(w.sample.by)+'</a>, '+esc(w.sample.lic)+(w.sample.src?', '+esc(w.sample.src):'')+'.</p>':'') : '';
-  var left = pic + '<span class="mk-wcat"'+(w.photo?' style="display:block;margin-top:16px"':'')+'>'+esc(lab(CATS, w.category))+'</span><h1 dir="auto" style="margin-top:8px">'+esc(w.title)+'</h1>'+stateLine+
+  var left = pic + '<span class="mk-wcat"'+(w.photo?' style="display:block;margin-top:16px"':'')+'>'+esc(lab(CATS, w.category))+'</span><h1 dir="auto" style="margin-top:8px">'+esc(clean(w.title))+'</h1>'+stateLine+
     '<div class="mk-bigprice">'+esc(budget(w))+'</div>'+
     '<div class="mk-facts"><span class="mk-fact">'+esc(lab(WCONDS, w.want_cond))+'</span>'+(w.size?'<span class="mk-fact" dir="auto">'+esc(w.size)+'</span>':'')+(w.location?'<span class="mk-fact" dir="auto">'+esc(w.location)+'</span>':'')+
     '<span class="mk-fact">'+esc(t("posted"))+' '+esc(date(w.created))+'</span>'+(open?'<span class="mk-fact">'+esc(t("until"))+' '+esc(date(w.expires))+'</span>':'')+'</div>'+
-    (w.description?'<div class="mk-desc" dir="auto">'+esc(w.description)+'</div>':'')+
+    (w.description?'<div class="mk-desc" dir="auto">'+esc(clean(w.description))+'</div>':'')+
     '<div class="mk-seller"><div class="lbl">'+esc(t("buyer"))+'</div><div class="nm" dir="auto">'+esc(w.shop_name || w.name)+shopTag(w)+'</div>'+(w.shop_name && w.name?'<div class="sub" dir="auto">'+esc(w.name)+'</div>':'')+
     (d?'<div class="ph">'+esc(pretty(w.phone))+'</div>':'')+'<div class="mk-acts">'+(d && !found?'<a class="mk-btn" target="_blank" rel="noopener" href="'+esc(wa)+'">'+esc(t("waBuyer"))+'</a>':'')+'<button class="mk-btn ghost" type="button" id="copy">'+esc(t("copy"))+'</button></div></div>'+
     '<p class="mk-note">'+esc(t("wSafety"))+' <a href="mailto:contact@saqeralkhalifa.com?subject='+encodeURIComponent("Market request report "+w.id)+'">'+esc(t("reportW"))+'</a></p>'+
@@ -469,8 +470,8 @@ function renderAsk(){
     if(v("a-web")) return;
     var b = document.getElementById("go"); b.disabled = true; b.textContent = t("sending");
     var shop = sb.checked;
-    rpc("post_wanted", {p:{title:v("a-title"), category:v("a-cat"), want_cond:v("a-cond"), budget:v("a-budget").replace(/[^\d.]/g,""), currency:v("a-cur"), size:v("a-size"),
-      description:v("a-desc"), name:v("a-name"), phone:v("a-phone"), location:v("a-loc"), shop:shop, shop_name:shop ? v("a-shopname") : ""}}).then(function(j){
+    rpc("post_wanted", {p:{title:clean(v("a-title")), category:v("a-cat"), want_cond:v("a-cond"), budget:v("a-budget").replace(/[^\d.]/g,""), currency:v("a-cur"), size:v("a-size"),
+      description:clean(v("a-desc")), name:v("a-name"), phone:v("a-phone"), location:v("a-loc"), shop:shop, shop_name:shop ? v("a-shopname") : ""}}).then(function(j){
       if(!j || !j.ok) throw new Error("post");
       var base = location.origin + location.pathname, vu = base + "?want=" + j.id, man = vu + "&key=" + j.token;
       wants = null; items = null; b.hidden = true;
