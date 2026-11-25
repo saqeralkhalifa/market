@@ -197,7 +197,7 @@ function renderItem(id, key){
   var gal = it.photos && it.photos.length ? '<div class="mk-gal" id="gal">'+it.photos.map(function(p){ return '<img src="'+esc(img(p))+'" alt="'+esc(clean(it.title))+'">'; }).join("")+'</div>'+
     (it.photos.length>1 ? '<div class="mk-thumbs">'+it.photos.map(function(p,i){ return '<button type="button" data-i="'+i+'" aria-label="Photo '+(i+1)+'"><img src="'+esc(img(p))+'" alt=""></button>'; }).join("")+'</div>' : '') :
     '<div class="mk-nophoto">'+esc(t("nophoto"))+'</div>';
-  if(it.sample) gal += '<p class="mk-smp">'+esc(t("smpNote"))+' '+esc(t("smpBy"))+': <a href="'+esc(it.sample.url)+'" target="_blank" rel="noopener">'+esc(it.sample.by)+'</a>, '+esc(it.sample.lic)+', Wikimedia Commons.</p>';
+  if(it.sample) gal += '<p class="mk-smp">'+esc(t("smpNote"))+' '+esc(t("smpBy"))+': <a href="'+esc(it.sample.url)+'" target="_blank" rel="noopener">'+esc(it.sample.by)+'</a>, '+esc(it.sample.lic)+', '+esc(it.sample.src||'Wikimedia Commons')+'.</p>';
   var sold = it.status === "sold";
   var d = digits(it.phone);
   var contact = d ? '<div class="mk-acts">'+(sold?'':'<a class="mk-btn" target="_blank" rel="noopener" href="https://wa.me/'+d+'?text='+encodeURIComponent(t("waMsg")(it.title))+'">'+esc(t("wa"))+'</a><a class="mk-btn ghost" href="tel:+'+d+'">'+esc(t("call"))+'</a>')+'<button class="mk-btn ghost" type="button" id="copy">'+esc(t("copy"))+'</button></div>'
