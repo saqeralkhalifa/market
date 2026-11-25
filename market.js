@@ -49,7 +49,7 @@ var T = {
   fPhoneH:"سيتواصل معك المشترون على هذا الرقم، وهو يظهر في الإعلان.", fConsent:"أنا مالك هذا المنتج أو أبيعه بإذن مالكه، وأوافق على ظهور اسمي ورقمي والصور للعامة في هذه الصفحة.",
   submit:"انشر الإعلان", sending:"جار النشر", errTitle:"اكتب ما الذي تبيعه.", errPhone:"أضف رقم واتساب من 8 أرقام على الأقل.", errConsent:"ضع علامة في المربع للتأكيد.",
   errNet:"تعذر نشر الإعلان. تأكد من الاتصال وحاول مرة أخرى.", errOff:"يفتح النشر لاحقا اليوم. حاول مرة أخرى بعد ساعات.", okH:"إعلانك منشور الآن.", okView:"عرض إعلانك", okKeep:"احفظ هذا الرابط الخاص، ستحتاجه لتغيير الحالة إلى تم البيع أو لحذف الإعلان:",
-  foot:'السوق <span class="sep"></span> د. صقر آل خليفة <span class="sep"></span> <a href="https://saqeralkhalifa.com/">saqeralkhalifa.com</a> <span class="sep"></span> <a href="https://saqeralkhalifa.com/privacy/">الخصوصية</a>'}
+  foot:'السوق <span class="sep"></span> د. صقر بن سلمان آل خليفة <span class="sep"></span> <a href="https://saqeralkhalifa.com/">saqeralkhalifa.com</a> <span class="sep"></span> <a href="https://saqeralkhalifa.com/privacy/">الخصوصية</a>'}
 };
 var CATS = [
  ["bikes","Bikes","الدراجات"],["wheels","Wheels","العجلات"],["trainers","Indoor trainers","أجهزة التدريب المنزلي"],["watches","Watches and electronics","الساعات والأجهزة"],
